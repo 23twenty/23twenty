@@ -1,0 +1,48 @@
+.slick-dots li.slick-active button:before {
+    color: orange !important;
+
+}
+
+.slick-dots li button:before {
+    color: red !important;
+}
+
+.slick-slider {
+    object-fit: cover;
+    height: 100vh;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.slick-active {
+    object-fit: contain;
+    color: red;
+}
+
+.slick-list {
+    padding: 0;
+    height: 100vh;
+}
+
+.slick-dots {
+    bottom: 30px;
+}
+
+.slick-prev {
+    left: 100px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 100px;
+    z-index: 1;
+}
+
+.slide-img-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+}

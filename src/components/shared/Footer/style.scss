@@ -1,0 +1,29 @@
+footer [class*="col-"] .widget {
+  margin-top: 30px
+}
+
+footer [class*="col-"] .widget:first-child {
+  margin-top: 0
+}
+
+footer .inner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+footer .inner:not(.display-block) {
+  display: table;
+}
+
+.sub-footer {
+  display: table;
+  width: 100%;
+}
+
+.sub-footer p {
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+}
