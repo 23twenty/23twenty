@@ -65,16 +65,10 @@ export default class Example extends React.Component {
                 <NavLink href="#">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">About</NavLink>
+                <NavLink href="#">Weddings</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Features</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">FAQ</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Team</NavLink>
+                <NavLink href="#">Contact</NavLink>
               </NavItem>
             </Nav>
             <div class="navbar-divider" />
