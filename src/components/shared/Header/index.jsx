@@ -74,14 +74,14 @@ export default class Example extends React.Component {
             <div class="navbar-divider" />
             <ul class="social social-mute social-s">
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/23twentymedia/">
                   <i>
                     <FaFacebookF />
                   </i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.instagram.com/23twentymedia/">
                   <i>
                     <FaInstagram />
                   </i>
