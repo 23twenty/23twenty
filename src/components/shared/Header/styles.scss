@@ -39,7 +39,8 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-transform: translateZ();
-    height: auto;
+    margin-top: 14px;
+    height: 50px;
     width: auto;
     max-width: none;
 }
@@ -300,4 +301,8 @@
     transform: translateY(-9px) rotate(-45deg);
     -moz-transform: translateY(-9px) rotate(-45deg);
     -webkit-transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar.nav-wrapper-dark {
+    background: #151515;
 }

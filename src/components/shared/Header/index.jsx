@@ -1,7 +1,8 @@
 import React from 'react'
-import Logo from './logo-light.png'
-import './styles.scss'
+import { Link } from 'gatsby'
 
+import Logo from './Logo-Light.svg'
+import './styles.scss'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 import {
@@ -38,20 +39,24 @@ export default class Example extends React.Component {
   }
 
   render() {
+    const { isTransparent } = this.props
+    console.log(isTransparent)
     const { isOpen } = this.state
     return (
       <Navbar
         expand="lg"
-        className="transparent absolute nav-wrapper-dark text-uppercase inverse-text"
+        className={`${
+          isTransparent ? 'transparent absolute' : 'solid'
+        } nav-wrapper-dark text-uppercase inverse-text`}
       >
         <div className="container">
           <div className="navbar-header">
-            <div class="navbar-brand">
-              <a href="index.html">
+            <div className="navbar-brand">
+              <Link to="/">
                 <img src={Logo} alt="webiste logo" />
-              </a>
+              </Link>
             </div>
-            <div class="navbar-hamburger ml-auto d-lg-none d-xl-none">
+            <div className="navbar-hamburger ml-auto d-lg-none d-xl-none">
               <NavbarToggler
                 onClick={this.toggle}
                 className={`hamburger animate ${isOpen ? 'active' : ''}`}
@@ -62,17 +67,28 @@ export default class Example extends React.Component {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="nav ml-auto sm-collapsible" navbar>
               <NavItem>
-                <NavLink href="#">Home</NavLink>
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Weddings</NavLink>
+                <Link to="/weddings" className="nav-link">
+                  Weddings
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Contact</NavLink>
+                <Link to="/investment" className="nav-link">
+                  Investment
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/about" className="nav-link">
+                  About
+                </Link>
               </NavItem>
             </Nav>
-            <div class="navbar-divider" />
-            <ul class="social social-mute social-s">
+            <div className="navbar-divider" />
+            <ul className="social social-mute social-s">
               <li>
                 <a href="https://www.facebook.com/23twentymedia/">
                   <i>

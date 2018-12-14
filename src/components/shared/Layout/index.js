@@ -1,31 +1,32 @@
-import React from "react";
-import emergence from "emergence.js";
+import React from 'react'
+import emergence from 'emergence.js'
 
-import Header from "components/shared/Header";
-import Footer from "components/shared/Footer";
+import Header from 'components/shared/Header'
+import Footer from 'components/shared/Footer'
 
-import "modern-normalize/modern-normalize.css";
-import "scss/main.scss";
+import 'modern-normalize/modern-normalize.css'
+import 'scss/main.scss'
 
 class Layout extends React.Component {
   componentDidMount() {
-    emergence.init();
+    emergence.init()
   }
 
   componentDidUpdate() {
-    emergence.init();
+    emergence.init()
   }
 
   render() {
-    const { children } = this.props;
+    const { trasparentHeader } = this.props
+    const { children } = this.props
     return (
       <div className="content-wrapper">
-        <Header />
+        <Header isTransparent={trasparentHeader} />
         {children}
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default Layout;
+export default Layout

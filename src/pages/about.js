@@ -2,20 +2,20 @@ import React from 'react'
 
 import Meta from 'components/shared/Meta'
 import Layout from 'components/shared/Layout'
-import Slider from 'components/home/slider'
-import Intro from 'components/home/intro'
+import HeroBg from 'components/about/herobg'
+import Intro from 'components/about/intro'
 import InstagramFeed from 'components/shared/Instafeed'
 import { siteMetadata } from '../../gatsby-config'
 
-const Index = ({ data, location }) => {
+const About = ({ location }) => {
   return (
-    <Layout location={location} trasparentHeader>
-      <Meta site={siteMetadata} title="Home" />
-      <Slider />
+    <Layout location={location}>
+      <Meta site={siteMetadata} title="About" />
+      <HeroBg />
       <Intro />
       <InstagramFeed />
     </Layout>
   )
 }
 
-export default Index
+export default About

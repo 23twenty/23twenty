@@ -1,20 +1,20 @@
-import React from "react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import "./style.scss";
+import React from 'react'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import './style.scss'
 
 const Footer = () => (
-  <footer class="dark-wrapper inverse-text">
-    <div class="sub-footer">
-      <div class="container inner text-center">
+  <footer className="dark-wrapper inverse-text">
+    <div className="sub-footer">
+      <div className="container inner text-center">
         <img
           src="#"
           srcset="style/images/logo-light.png 1x, style/images/logo-light@2x.png 2x"
           alt=""
         />
-        <div class="space25" />
+        <div className="space25" />
         <p>© 2018 Brailie. All rights reserved. Theme by elemis.</p>
-        <div class="space30" />
-        <ul class="social social-bg social-s">
+        <div className="space30" />
+        <ul className="social social-bg social-s">
           <li>
             <a href="https://www.facebook.com/23twentymedia/">
               <i className="fa fa-facebook-f">
@@ -33,6 +33,6 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer

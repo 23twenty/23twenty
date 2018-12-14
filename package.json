@@ -25,10 +25,13 @@
     "gatsby-transformer-sharp": "2.1.8",
     "instafeed": "^2.0.0",
     "react-icons": "^3.2.2",
+    "react-id-swiper": "^1.6.8",
     "react-instafeed": "^0.4.0",
+    "react-progressbar.js": "^0.2.0",
     "react-slick": "^0.23.2",
     "reactstrap": "^6.5.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^4.4.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.8",
@@ -59,7 +62,6 @@
   },
   "lint-staged": {
     "*.{js,json,md}": [
-      "prettier --write",
       "git add"
     ],
     "*.md": [
