@@ -2,31 +2,31 @@ import React from 'react'
 import './styles.scss'
 
 const PricingTable = () => (
-  <div class="wrapper light-wrapper">
-    <div class="container inner">
-      <h2 class="section-title text-center">Our Prices</h2>
-      <p class="lead text-center">
+  <div className="wrapper light-wrapper">
+    <div className="container inner">
+      <h2 className="section-title text-center">Our Prices</h2>
+      <p className="lead text-center">
         Awesome deals with simple pricing model are here! We offer great prices,
-        <br class="d-none d-xl-block" />
+        <br className="d-none d-xl-block" />
         premium products and quality service for your business.
       </p>
-      <div class="space30" />
-      <div class="row no-gutter">
-        <div class="col-md-4">
-          <div class="pricing panel">
-            <div class="panel-heading">
-              <div class="icon icon-color color-default fs-48">
-                <i class="si-building_home" />
+      <div className="space30" />
+      <div className="row no-gutter">
+        <div className="col-md-4">
+          <div className="pricing panel">
+            <div className="panel-heading">
+              <div className="icon icon-color color-default fs-48">
+                <i className="si-building_home" />
               </div>
-              <h4 class="panel-title color-dark">Individuals</h4>
-              <div class="price color-dark">
-                <span class="price-currency">$</span>
-                <span class="price-value">35</span>{' '}
-                <span class="price-duration">year</span>
+              <h4 className="panel-title color-dark">Individuals</h4>
+              <div className="price color-dark">
+                <span className="price-currency">$</span>
+                <span className="price-value">35</span>{' '}
+                <span className="price-duration">year</span>
               </div>
             </div>
-            <div class="panel-body">
-              <table class="table">
+            <div className="panel-body">
+              <table className="table">
                 <tr>
                   <td>
                     <strong>1</strong> Project{' '}
@@ -60,30 +60,30 @@ const PricingTable = () => (
                 </tr>
               </table>
             </div>
-            <div class="panel-footer">
+            <div className="panel-footer">
               {' '}
-              <a href="#" class="btn btn-full-rounded" role="button">
+              <a href="#" className="btn btn-full-rounded" role="button">
                 Choose Plan
               </a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="pricing panel">
-            <div class="panel-heading">
-              <div class="icon icon-color color-default fs-48">
-                <i class="si-building_small-shop" />
+        <div className="col-md-4">
+          <div className="pricing panel">
+            <div className="panel-heading">
+              <div className="icon icon-color color-default fs-48">
+                <i className="si-building_small-shop" />
               </div>
-              <h4 class="panel-title color-dark">Small Team</h4>
-              <div class="price color-dark">
+              <h4 className="panel-title color-dark">Small Team</h4>
+              <div className="price color-dark">
                 {' '}
-                <span class="price-currency">$</span>
-                <span class="price-value">45</span>{' '}
-                <span class="price-duration">year</span>
+                <span className="price-currency">$</span>
+                <span className="price-value">45</span>{' '}
+                <span className="price-duration">year</span>
               </div>
             </div>
-            <div class="panel-body">
-              <table class="table">
+            <div className="panel-body">
+              <table className="table">
                 <tr>
                   <td>
                     <strong>5</strong> Projects{' '}
@@ -119,30 +119,30 @@ const PricingTable = () => (
                 </tr>
               </table>
             </div>
-            <div class="panel-footer">
+            <div className="panel-footer">
               {' '}
-              <a href="#" class="btn btn-full-rounded" role="button">
+              <a href="#" className="btn btn-full-rounded" role="button">
                 Choose Plan
               </a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="pricing panel">
-            <div class="panel-heading">
-              <div class="icon icon-color color-default fs-48">
-                <i class="si-building_resident-block" />
+        <div className="col-md-4">
+          <div className="pricing panel">
+            <div className="panel-heading">
+              <div className="icon icon-color color-default fs-48">
+                <i className="si-building_resident-block" />
               </div>
-              <h4 class="panel-title color-dark">Organization</h4>
-              <div class="price color-dark">
+              <h4 className="panel-title color-dark">Organization</h4>
+              <div className="price color-dark">
                 {' '}
-                <span class="price-currency">$</span>
-                <span class="price-value">55</span>{' '}
-                <span class="price-duration">year</span>
+                <span className="price-currency">$</span>
+                <span className="price-value">55</span>{' '}
+                <span className="price-duration">year</span>
               </div>
             </div>
-            <div class="panel-body">
-              <table class="table">
+            <div className="panel-body">
+              <table className="table">
                 <tr>
                   <td>
                     <strong>20</strong> Projects{' '}
@@ -178,9 +178,9 @@ const PricingTable = () => (
                 </tr>
               </table>
             </div>
-            <div class="panel-footer">
+            <div className="panel-footer">
               {' '}
-              <a href="#" class="btn btn-full-rounded" role="button">
+              <a href="#" className="btn btn-full-rounded" role="button">
                 Choose Plan
               </a>
             </div>

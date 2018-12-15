@@ -1,18 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Headhesive from 'headhesive'
 
 import Logo from './Logo-Light.svg'
 import './styles.scss'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap'
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap'
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -28,26 +22,39 @@ export default class Example extends React.Component {
       isOpen: !this.state.isOpen,
     })
   }
-  componentWillMount() {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 992 && this.state.isOpen === true) {
-        this.setState({
-          isOpen: false,
-        })
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      var options = {
+        offset: 350,
+        offsetSide: 'top',
+        classes: {
+          clone: 'banner--clone fixed',
+          stick: 'banner--stick',
+          unstick: 'banner--unstick',
+        },
       }
-    })
+      new Headhesive('.navbar', options)
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 992 && this.state.isOpen === true) {
+          this.setState({
+            isOpen: false,
+          })
+        }
+      })
+    }
   }
 
   render() {
     const { isTransparent } = this.props
-    console.log(isTransparent)
     const { isOpen } = this.state
     return (
       <Navbar
         expand="lg"
         className={`${
-          isTransparent ? 'transparent absolute' : 'solid'
-        } nav-wrapper-dark text-uppercase inverse-text`}
+          isTransparent ? 'transparent absolute' : `solid`
+        } nav-wrapper-dark text-uppercase inverse-text 
+         `}
       >
         <div className="container">
           <div className="navbar-header">
@@ -90,14 +97,20 @@ export default class Example extends React.Component {
             <div className="navbar-divider" />
             <ul className="social social-mute social-s">
               <li>
-                <a href="https://www.facebook.com/23twentymedia/">
+                <a
+                  href="https://www.facebook.com/23twentymedia/"
+                  target="_blank"
+                >
                   <i>
                     <FaFacebookF />
                   </i>
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/23twentymedia/">
+                <a
+                  href="https://www.instagram.com/23twentymedia/"
+                  target="_blank"
+                >
                   <i>
                     <FaInstagram />
                   </i>

@@ -23,7 +23,6 @@
 
 .slick-list {
     padding: 0;
-    height: 100vh;
 }
 
 .slick-dots {
@@ -45,4 +44,67 @@
     background-size: cover;
     height: 100vh;
     background-position: center center;
+}
+
+.slick-prev:before {
+    content: "<";
+    font-size: 60px;
+}
+
+.slick-next:before {
+    content: ">";
+    font-size: 60px;
+}
+
+.slider-container {
+    height: 100vh;
+}
+
+.slick-thumb {
+    max-height: 90px;
+    overflow: hidden;
+    bottom: 90px;
+    position: relative;
+    cursor: pointer;
+
+    li {
+        margin: 0;
+        width: 150px;
+        height: 90px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .slick-list {
+        position: relative;
+        bottom: 0;
+    }
+
+    .slick-track {
+        height: 100;
+    }
+
+    .slide-img-bg {
+        height: 100px;
+        padding: 0;
+    }
+
+    .slick-current {
+        border: 2px solid rgba(255, 255, 255, 0.8)
+    }
+
+    .gatsby-image-outer-wrapper,
+    .gatsby-image-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 90px;
+
+        img {
+            object-fit: cover !important;
+            object-position: 50% 25% !important;
+            font-family: 'object-fit: cover !important; object-position: 0% 0% !important;' // needed for IE9+ polyfill
+        }
+    }
 }

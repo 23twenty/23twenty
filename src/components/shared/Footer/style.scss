@@ -1,12 +1,12 @@
-footer [class*="col-"] .widget {
+.footer [class*="col-"] .widget {
   margin-top: 30px
 }
 
-footer [class*="col-"] .widget:first-child {
+.footer [class*="col-"] .widget:first-child {
   margin-top: 0
 }
 
-footer .inner {
+.footer .inner {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -15,7 +15,11 @@ footer .inner:not(.display-block) {
   display: table;
 }
 
-.sub-footer {
+.footer-logo {
+  height: 50px;
+}
+
+.footer- .sub-footer {
   display: table;
   width: 100%;
 }

@@ -7,9 +7,16 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/background-images/`,
+        path: `${__dirname}/content/images/`,
         name: 'images',
       },
     },
@@ -57,6 +64,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     'gatsby-plugin-sass',
+    `gatsby-plugin-purgecss`,
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',

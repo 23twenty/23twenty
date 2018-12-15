@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import ImageWrapper from 'components/shared/ImageWrapper'
 
 import './styles.scss'
-import AboutImage from './about4.jpg'
 
 const HeroBg = () => (
   <div className="wrapper light-wrapper">
@@ -10,7 +10,7 @@ const HeroBg = () => (
       <div className="row">
         <div className="col-md-8 offset-md-2">
           <figure>
-            <img src={AboutImage} alt="" />
+            <ImageWrapper src="pages/about/intro.jpg" />
           </figure>
           <div className="space30" />
           <h2 className="section-title text-center">Who is Behind?</h2>

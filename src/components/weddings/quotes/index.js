@@ -16,44 +16,48 @@ const quotes = () => {
   }
   return (
     <div
-      class="wrapper image-wrapper bg-image inverse-text"
+      className="wrapper image-wrapper bg-image inverse-text"
       style={{ backgroundImage: `url(${BgImage})` }}
     >
-      <div class="container inner pt-120 pb-120">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-            <div class="swiper-container-wrapper basic-slider">
-              <div class="swiper-container text-center">
+      <div className="container inner pt-120 pb-120">
+        <div className="row">
+          <div className="col-lg-8 offset-lg-2">
+            <div className="swiper-container-wrapper basic-slider">
+              <div className="swiper-container text-center">
                 <Swiper {...options}>
-                  {/* <div class="swiper-wrapper"> */}
-                  <div class="swiper-slide">
-                    <blockquote class="icon icon-top larger">
+                  {/* <div className="swiper-wrapper"> */}
+                  <div className="swiper-slide">
+                    <blockquote className="icon icon-top larger">
                       <p>
                         Consectetur adipiscing elit. Duis mollis, est non
                         commodo luctus gestas eget quam integer. Curabitur
                         blandit tempus rutrum faucibus.
                       </p>
-                      <footer class="blockquote-footer">Connor Gibson</footer>
+                      <footer className="blockquote-footer">
+                        Connor Gibson
+                      </footer>
                     </blockquote>
                   </div>
-                  <div class="swiper-slide">
-                    <blockquote class="icon icon-top larger">
+                  <div className="swiper-slide">
+                    <blockquote className="icon icon-top larger">
                       <p>
                         Vivamus sagittis lacus vel augue laoreet rutrum faucibus
                         dolor auctor. Vestibulum id ligula porta felis euismod
                         semper. Cras justo odio.
                       </p>
-                      <footer class="blockquote-footer">Coriss Ambady</footer>
+                      <footer className="blockquote-footer">
+                        Coriss Ambady
+                      </footer>
                     </blockquote>
                   </div>
-                  <div class="swiper-slide">
-                    <blockquote class="icon icon-top larger">
+                  <div className="swiper-slide">
+                    <blockquote className="icon icon-top larger">
                       <p>
                         Duis mollis, est non commodo luctus, nisi erat porttitor
                         ligula, eget lacinia odio sem nec elit. Cras justo odio,
                         dapibus ac facilisis.
                       </p>
-                      <footer class="blockquote-footer">
+                      <footer className="blockquote-footer">
                         Barclay Widerski
                       </footer>
                     </blockquote>
@@ -62,7 +66,7 @@ const quotes = () => {
                 </Swiper>
               </div>
 
-              <div class="swiper-pagination gap-small" />
+              <div className="swiper-pagination gap-small" />
             </div>
           </div>
         </div>

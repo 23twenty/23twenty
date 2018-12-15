@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 import Swiper from 'react-id-swiper'
-
-import t5 from './images/t5.jpg'
-import t6 from './images/t6.jpg'
-import t7 from './images/t7.jpg'
-import t8 from './images/t8.jpg'
-import t9 from './images/t9.jpg'
-import t10 from './images/t10.jpg'
+import ImageWrapper from 'components/shared/ImageWrapper'
 
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
@@ -35,25 +29,25 @@ class Team extends Component {
     }
 
     return (
-      <div class="wrapper light-wrapper">
-        <div class="container inner">
-          <h2 class="section-title section-title-upper mb-40 text-center">
+      <div className="wrapper light-wrapper">
+        <div className="container inner">
+          <h2 className="section-title section-title-upper mb-40 text-center">
             Meet the Team
           </h2>
-          <div class="swiper-container-wrapper swiper-col4" data-aos="fade">
-            <div class="swiper-container text-center">
+          <div className="swiper-container-wrapper swiper-col4" data-aos="fade">
+            <div className="swiper-container text-center">
               <Swiper {...params}>
-                <div class="swiper-slide">
-                  <figure class="mb-20">
-                    <img src={t5} alt="" />
+                <div className="swiper-slide">
+                  <figure className="mb-20">
+                    <ImageWrapper src="pages/weddings/teams/member_three.jpg" />
                   </figure>
-                  <h5 class="mb-5">Coriss Ambady</h5>
-                  <div class="meta">Art Director</div>
+                  <h5 className="mb-5">Coriss Ambady</h5>
+                  <div className="meta">Art Director</div>
                   <p>
                     Etiam porta sem malesuada magna mollis euismod. Donec sed
                     odio dui consectetur.
                   </p>
-                  <ul class="social social-color social-s">
+                  <ul className="social social-color social-s">
                     <li>
                       <a href="#">
                         <i className="fa fa-facebook">
@@ -70,17 +64,17 @@ class Team extends Component {
                     </li>
                   </ul>
                 </div>
-                <div class="swiper-slide">
-                  <figure class="mb-20">
-                    <img src={t6} alt="" />
+                <div className="swiper-slide">
+                  <figure className="mb-20">
+                    <ImageWrapper src="pages/weddings/teams/member_four.jpg" />
                   </figure>
-                  <h5 class="mb-5">Cory Zamora</h5>
-                  <div class="meta">Photographer</div>
+                  <h5 className="mb-5">Cory Zamora</h5>
+                  <div className="meta">Photographer</div>
                   <p>
                     Vivamus sagittis lacus vel augue laoreet rutrum faucibus
                     dolor auctor adipiscing elit.
                   </p>
-                  <ul class="social social-color social-s">
+                  <ul className="social social-color social-s">
                     <li>
                       <a href="#">
                         <i className="fa fa-facebook">
@@ -97,17 +91,17 @@ class Team extends Component {
                     </li>
                   </ul>
                 </div>
-                <div class="swiper-slide">
-                  <figure class="mb-20">
-                    <img src={t7} alt="" />
+                <div className="swiper-slide">
+                  <figure className="mb-20">
+                    <ImageWrapper src="pages/weddings/teams/member_three.jpg" />
                   </figure>
-                  <h5 class="mb-5">Barclay Widerski</h5>
-                  <div class="meta">Photographer & Editor</div>
+                  <h5 className="mb-5">Barclay Widerski</h5>
+                  <div className="meta">Photographer & Editor</div>
                   <p>
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris
                     condimentum nibh.
                   </p>
-                  <ul class="social social-color social-s">
+                  <ul className="social social-color social-s">
                     <li>
                       <a href="#">
                         <i className="fa fa-facebook">
@@ -124,17 +118,17 @@ class Team extends Component {
                     </li>
                   </ul>
                 </div>
-                <div class="swiper-slide">
-                  <figure class="mb-20">
-                    <img src={t8} alt="" />
+                <div className="swiper-slide">
+                  <figure className="mb-20">
+                    <ImageWrapper src="pages/weddings/teams/member_four.jpg" />
                   </figure>
-                  <h5 class="mb-5">Nikola Brooten</h5>
-                  <div class="meta">Videographer</div>
+                  <h5 className="mb-5">Nikola Brooten</h5>
+                  <div className="meta">Videographer</div>
                   <p>
                     Fermentum massa justo sit amet risus. Morbi leo risus, porta
                     ac consectetur.
                   </p>
-                  <ul class="social social-color social-s">
+                  <ul className="social social-color social-s">
                     <li>
                       <a href="#">
                         <i className="fa fa-facebook">
@@ -151,17 +145,17 @@ class Team extends Component {
                     </li>
                   </ul>
                 </div>
-                <div class="swiper-slide">
-                  <figure class="mb-20">
-                    <img src={t9} alt="" />
+                <div className="swiper-slide">
+                  <figure className="mb-20">
+                    <ImageWrapper src="pages/weddings/teams/member_five.jpg" />
                   </figure>
-                  <h5 class="mb-5">Connor Gibson</h5>
-                  <div class="meta">Photographer</div>
+                  <h5 className="mb-5">Connor Gibson</h5>
+                  <div className="meta">Photographer</div>
                   <p>
                     Nulla non metus auctor fringilla. Sed posuere consectetur
                     est at lobortis donec.
                   </p>
-                  <ul class="social social-color social-s">
+                  <ul className="social social-color social-s">
                     <li>
                       <a href="#">
                         <i className="fa fa-facebook">
@@ -178,17 +172,17 @@ class Team extends Component {
                     </li>
                   </ul>
                 </div>
-                <div class="swiper-slide">
-                  <figure class="mb-20">
-                    <img src={t10} alt="" />
+                <div className="swiper-slide">
+                  <figure className="mb-20">
+                    <ImageWrapper src="pages/weddings/teams/member_six.jpg" />
                   </figure>
-                  <h5 class="mb-5">Jackie Sanders</h5>
-                  <div class="meta">Intern</div>
+                  <h5 className="mb-5">Jackie Sanders</h5>
+                  <div className="meta">Intern</div>
                   <p>
                     Maecenas sed diam eget risus varius blandit sit amet non
                     magna ullamcorper.
                   </p>
-                  <ul class="social social-color social-s">
+                  <ul className="social social-color social-s">
                     <li>
                       <a href="#">
                         <i className="fa fa-facebook">
@@ -207,7 +201,7 @@ class Team extends Component {
                 </div>
               </Swiper>
             </div>
-            <div class="swiper-pagination gap-large" />
+            <div className="swiper-pagination gap-large" />
           </div>
         </div>
       </div>
