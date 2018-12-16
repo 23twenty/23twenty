@@ -27,36 +27,38 @@ const PricingTable = () => (
             </div>
             <div className="panel-body">
               <table className="table">
-                <tr>
-                  <td>
-                    <strong>1</strong> Project
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>100K</strong> API Access
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>100MB</strong> Storage
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Custom <strong>Cloud</strong> Services
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Weekly <strong>Reports</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    7/24 <strong>Support</strong>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>1</strong> Project
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>100K</strong> API Access
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>100MB</strong> Storage
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom <strong>Cloud</strong> Services
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Weekly <strong>Reports</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      7/24 <strong>Support</strong>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div className="panel-footer">
@@ -81,36 +83,38 @@ const PricingTable = () => (
             </div>
             <div className="panel-body">
               <table className="table">
-                <tr>
-                  <td>
-                    <strong>5</strong> Projects
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>100K</strong> API Access
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>200MB</strong> Storage
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Custom <strong>Cloud</strong> Services
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Weekly <strong>Reports</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    7/24 <strong>Support</strong>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>5</strong> Projects
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>100K</strong> API Access
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>200MB</strong> Storage
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom <strong>Cloud</strong> Services
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Weekly <strong>Reports</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      7/24 <strong>Support</strong>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div className="panel-footer">

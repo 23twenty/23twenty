@@ -22,7 +22,7 @@ class ClientsSlider extends Component {
     const settings = {
       arrows: true,
       infinite: true,
-      autoplay: false,
+      autoplay: true,
       draggable: true,
       focusOnSelect: false,
       speed: 700,
