@@ -41,8 +41,8 @@ export const query = graphql`
             fixed(height: 90, width: 150) {
               ...GatsbyImageSharpFixed
             }
-            sizes(maxWidth: 2000) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 2000) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }

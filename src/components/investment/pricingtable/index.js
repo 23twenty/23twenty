@@ -21,7 +21,7 @@ const PricingTable = () => (
               <h4 className="panel-title color-dark">Individuals</h4>
               <div className="price color-dark">
                 <span className="price-currency">$</span>
-                <span className="price-value">35</span>{' '}
+                <span className="price-value">35</span>
                 <span className="price-duration">year</span>
               </div>
             </div>
@@ -29,22 +29,22 @@ const PricingTable = () => (
               <table className="table">
                 <tr>
                   <td>
-                    <strong>1</strong> Project{' '}
+                    <strong>1</strong> Project
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>100K</strong> API Access{' '}
+                    <strong>100K</strong> API Access
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>100MB</strong> Storage{' '}
+                    <strong>100MB</strong> Storage
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    Custom <strong>Cloud</strong> Services{' '}
+                    Custom <strong>Cloud</strong> Services
                   </td>
                 </tr>
                 <tr>
@@ -54,14 +54,12 @@ const PricingTable = () => (
                 </tr>
                 <tr>
                   <td>
-                    {' '}
                     7/24 <strong>Support</strong>
                   </td>
                 </tr>
               </table>
             </div>
             <div className="panel-footer">
-              {' '}
               <a href="#" className="btn btn-full-rounded" role="button">
                 Choose Plan
               </a>
@@ -76,9 +74,8 @@ const PricingTable = () => (
               </div>
               <h4 className="panel-title color-dark">Small Team</h4>
               <div className="price color-dark">
-                {' '}
                 <span className="price-currency">$</span>
-                <span className="price-value">45</span>{' '}
+                <span className="price-value">45</span>
                 <span className="price-duration">year</span>
               </div>
             </div>
@@ -86,41 +83,37 @@ const PricingTable = () => (
               <table className="table">
                 <tr>
                   <td>
-                    <strong>5</strong> Projects{' '}
+                    <strong>5</strong> Projects
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>100K</strong> API Access{' '}
+                    <strong>100K</strong> API Access
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>200MB</strong> Storage{' '}
+                    <strong>200MB</strong> Storage
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    {' '}
-                    Custom <strong>Cloud</strong> Services{' '}
+                    Custom <strong>Cloud</strong> Services
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    {' '}
                     Weekly <strong>Reports</strong>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    {' '}
                     7/24 <strong>Support</strong>
                   </td>
                 </tr>
               </table>
             </div>
             <div className="panel-footer">
-              {' '}
               <a href="#" className="btn btn-full-rounded" role="button">
                 Choose Plan
               </a>
@@ -135,51 +128,48 @@ const PricingTable = () => (
               </div>
               <h4 className="panel-title color-dark">Organization</h4>
               <div className="price color-dark">
-                {' '}
                 <span className="price-currency">$</span>
-                <span className="price-value">55</span>{' '}
+                <span className="price-value">55</span>
                 <span className="price-duration">year</span>
               </div>
             </div>
             <div className="panel-body">
               <table className="table">
-                <tr>
-                  <td>
-                    <strong>20</strong> Projects{' '}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>300K</strong> API Access{' '}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>500MB</strong> Storage{' '}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    {' '}
-                    Custom <strong>Cloud</strong> Services{' '}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    {' '}
-                    Weekly <strong>Reports</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    {' '}
-                    7/24 <strong>Support</strong>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>20</strong> Projects
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>300K</strong> API Access
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>500MB</strong> Storage
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Custom <strong>Cloud</strong> Services
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Weekly <strong>Reports</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      7/24 <strong>Support</strong>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div className="panel-footer">
-              {' '}
               <a href="#" className="btn btn-full-rounded" role="button">
                 Choose Plan
               </a>

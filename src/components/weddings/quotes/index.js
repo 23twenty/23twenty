@@ -15,10 +15,7 @@ const quotes = () => {
     },
   }
   return (
-    <div
-      className="wrapper image-wrapper bg-image inverse-text"
-      style={{ backgroundImage: `url(${BgImage})` }}
-    >
+    <div className="wrapper image-wrapper bg-image inverse-text quotes-bg-image">
       <div className="container inner pt-120 pb-120">
         <div className="row">
           <div className="col-lg-8 offset-lg-2">

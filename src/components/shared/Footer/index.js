@@ -1,13 +1,24 @@
 import React from 'react'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import ScrollToTop from 'react-scroll-up'
+import { FaFacebookF, FaInstagram, FaChevronUp } from 'react-icons/fa'
 import Logo from '../Header/Logo-Light.svg'
 import './style.scss'
 
 const Footer = () => (
   <footer className="dark-wrapper inverse-text">
+    <div id="scrollUp">
+      <ScrollToTop showUnder={400}>
+        <span className="btn btn-square btn-full-rounded btn-icon ">
+          <i className="scroll-up">
+            <FaChevronUp />
+          </i>
+        </span>
+      </ScrollToTop>
+    </div>
+
     <div className="sub-footer">
       <div className="container inner text-center">
-        <img src={Logo} class="footer-logo" />
+        <img src={Logo} className="footer-logo" />
         <div className="space25" />
         <p>© 2018 Brailie. All rights reserved. Theme by elemis.</p>
         <div className="space30" />

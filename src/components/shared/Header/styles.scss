@@ -144,7 +144,6 @@
 }
 
 .navbar.fixed .navbar-brand img {
-    height: 30px !important;
     width: auto !important;
 }
 
@@ -344,15 +343,16 @@
     background: rgba(21, 21, 21, 0.6)
 }
 
-.navbar.fixed.nav-wrapper-dark {
-    background: rgba(21, 21, 21, 0.9);
-    opacity: 0.9;
-}
 
-.navbar.opacity.nav-wrapper-light {
-    background: rgba(255, 255, 255, 0.8)
+.navbar.fixed.nav-wrapper-dark {
+    background: rgba(21, 21, 21, 0.8);
 }
 
 .navbar.fixed.nav-wrapper-light {
-    background: rgba(255, 255, 255, 0.9)
+    background: rgba(21, 21, 21, 0.8);
+}
+
+.navbar.fixed.nav-wrapper-dark.banner--stick {
+    background: rgba(21, 21, 21, 0.8);
+    opacity: 0.6;
 }

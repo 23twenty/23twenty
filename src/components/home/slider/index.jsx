@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick'
-import ImageWrapper from 'components/shared/ImageWrapper'
 import Img from 'gatsby-image'
 import './styles.scss'
-
 class ClientsSlider extends Component {
   constructor(props) {
     super(props)
@@ -34,25 +32,36 @@ class ClientsSlider extends Component {
       slidesToShow: 1,
       fade: false,
       cssEase: 'ease',
+      responsive: [
+        {
+          breakpoint: 920,
+          settings: {
+            arrows: false,
+          },
+        },
+      ],
     }
     const AllSliders = images.map(item => {
-      const url = `url("${item.node.childImageSharp.sizes.src}")`
+      const url = `url("${item.node.childImageSharp.fluid.src}")`
       return (
-        <div className="item">
+        <div className="item align-middle " key={url}>
           <div
             className="slide-img-bg"
             style={{
               backgroundImage: url,
             }}
-          />
+          >
+            <h1 className="slider-hero-text puffIn">Jonathan Brailie</h1>
+            <h2 className="slider-hero-subtitle">Fashion Photographer</h2>
+          </div>
         </div>
       )
     })
 
     const AllSlidersTumb = images.map(item => {
-      const sizes = item.node.childImageSharp.sizes
+      const sizes = item.node.childImageSharp.fluid
       return (
-        <div className="item">
+        <div className="item" key={sizes.src}>
           <Img fluid={sizes} backgroundColor="rgb(61,68,75)" />
         </div>
       )
@@ -77,6 +86,29 @@ class ClientsSlider extends Component {
           swipeToSlide={true}
           focusOnSelect={true}
           className="slick-thumb"
+          responsive={[
+            {
+              breakpoint: 920,
+              settings: {
+                slidesToShow: 5,
+                arrows: false,
+              },
+            },
+            {
+              breakpoint: 720,
+              settings: {
+                slidesToShow: 4,
+                arrows: false,
+              },
+            },
+            {
+              breakpoint: 540,
+              settings: {
+                slidesToShow: 3,
+                arrows: false,
+              },
+            },
+          ]}
         >
           {AllSlidersTumb}
         </Slider>
