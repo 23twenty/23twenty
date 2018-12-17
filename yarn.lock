@@ -9675,7 +9675,7 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-slick@^0.25.1:
+react-slick@^0.22.3:
   version "0.22.3"
   resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.22.3.tgz#667991b2496e6b10bcca2a2e676ffadf34e7d56c"
   integrity sha512-4u8/98/2BqdDkLSl3ovKlM+EamzAzAQlZozSZ7WIuw7TnlTFboFR/ntgU0JCnIRSeSj6S5pIa0gxXL8v5XSzfg==
