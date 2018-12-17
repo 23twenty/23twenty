@@ -61,7 +61,7 @@ class ClientsSlider extends Component {
     const AllSlidersTumb = images.map(item => {
       const sizes = item.node.childImageSharp.fluid
       return (
-        <div className="item" key={sizes.src}>
+        <div className="item" key={sizes.src} style={{ width: '150px' }}>
           <Img fluid={sizes} backgroundColor="rgb(61,68,75)" />
         </div>
       )
@@ -77,6 +77,7 @@ class ClientsSlider extends Component {
           {AllSliders}
         </Slider>
         <Slider
+          variableWidth={true}
           cssEase="ease"
           centerPadding="0px"
           asNavFor={this.state.nav1}
