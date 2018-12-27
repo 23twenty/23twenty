@@ -11,11 +11,19 @@ const Slider = ({images}) => {
       thumbnail: img.fixed.src
     }
   });
-  return <ImageGallery items={slides}
-                       autoPlay={true}
-                       additionalClass="home-slider"
-                       showNav={false}
-                       showPlayButton={false}/>;
+  return <div className="slider-wrapper">
+    <ImageGallery items={slides}
+                  autoPlay={true}
+                  additionalClass="home-slider"
+                  showNav={false}
+                  showPlayButton={false}/>
+    <div className="title">
+      Photography &<br/>
+      Videography &<br/>
+      Creativity & <br/>
+      Awesome.
+    </div>
+  </div>;
 };
 
 export default Slider;

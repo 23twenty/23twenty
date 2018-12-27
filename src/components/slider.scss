@@ -1,5 +1,32 @@
-.home-slider {
-  //padding-top: 86px;
-  //height: 100vh;
+.slider-wrapper {
+  position: relative;
+  height: 100vh;
 
+  .home-slider {
+    position: absolute;
+    .image-gallery-slides {
+      height: 100vh;
+    }
+
+    //moves thumbnails into slider...
+    .image-gallery-thumbnails {
+      bottom: 73px;
+      position: relative;
+    }
+  }
+
+  .title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 90px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5em;
+    opacity: .6;
+  }
 }
