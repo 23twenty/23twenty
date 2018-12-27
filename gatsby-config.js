@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: '23twentymedia',
-    description: 'Photography Videography in Philadelphia, Pennsylvania',
-    siteUrl: 'https://23twentymedia.com',
+    description: 'Photography | Videography in Philadelphia, Pennsylvania',
+    siteUrl: 'https://23twenty.com',
   },
   pathPrefix: '/',
   plugins: [
@@ -26,7 +26,7 @@ module.exports = {
         name: '23twentymedia',
         short_name: '23twentymedia',
         description: 'Photography Videography in Philadelphia, Pennsylvania',
-        homepage_url: 'https://23twentymedia.com',
+        homepage_url: 'https://23twenty.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',

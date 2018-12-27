@@ -14,3 +14,9 @@
 .space20 {
     height: 20px;
 }
+
+@media (min-width: 576px) {
+    .mobile-only {
+        display: none !important;
+    }
+}

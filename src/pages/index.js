@@ -1,24 +1,24 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Meta from 'components/shared/Meta'
-import Layout from 'components/shared/Layout'
-import Slider from 'components/home/slider'
-import Intro from 'components/home/intro'
-import InstagramFeed from 'components/shared/Instafeed'
+import Meta from '../components/shared/Meta'
+import Layout from '../components/shared/Layout'
+import Slider from '../components/slider'
+import Intro from '../components/home/intro'
+import InstagramFeed from '../components/shared/Instafeed'
 import { siteMetadata } from '../../gatsby-config'
 
 const Index = ({ data, location }) => {
-  const sliderImages = data.allFile.edges
+  const sliderImages = data.allFile.edges;
   return (
-    <Layout location={location} trasparentHeader>
+    <Layout location={location} transparentHeader>
       <Meta site={siteMetadata} title="Home" />
       <Slider images={sliderImages} />
       <Intro />
       <InstagramFeed />
     </Layout>
   )
-}
+};
 
 export default Index
 
@@ -41,7 +41,7 @@ export const query = graphql`
             fixed(height: 90, width: 150) {
               ...GatsbyImageSharpFixed
             }
-            fluid(maxWidth: 2000) {
+            fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -49,4 +49,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

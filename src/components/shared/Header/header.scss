@@ -3,18 +3,87 @@
     width: 100%;
     padding: 0;
     font-family: 'Montserrat';
+
+    .logo {
+        transition: all 0.3s;
+        height: 75px;
+        width: auto;
+        max-width: none;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .desktop-link {
+        a {
+            color: white;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.4em;
+            line-height: 1.81em;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 10px 10px 10px 0;
+            transition: 0.5s ease all;
+        }
+        .underline {
+            width: 0;
+            border-bottom: 6px solid white;
+            transition: 0.5s ease all;
+        }
+
+        &:hover {
+            a {
+                color: #a26327;
+            }
+
+            .underline {
+                width: 100%;
+                border-color: #a26327;
+            }
+        }
+    }
+
+    &.absolute {
+        position: absolute;
+    }
 }
 
-.navbar .container {
-    position: relative;
-}
 
-.navbar.absolute {
-    position: absolute;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .navbar.transparent:not(.banner--clone) {
-    background: none;
+    //background: none;
 }
 
 .navbar.transparent.fixed.nav-wrapper-light,
@@ -30,19 +99,8 @@
 }
 
 .navbar.transparent .navbar-brand {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.navbar-brand img {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: translateZ();
-    margin-top: 14px;
-    height: 50px;
-    width: auto;
-    max-width: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
@@ -328,7 +386,7 @@
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
-    background: rgba(255, 255, 255, 0.9)
+    background: rgba(21, 21, 21, 0.3)
 }
 
 .navbar.nav-wrapper-dark {
@@ -340,7 +398,7 @@
 }
 
 .navbar.opacity.nav-wrapper-dark {
-    background: rgba(21, 21, 21, 0.6)
+    background: rgba(21, 21, 21, 0.2)
 }
 
 
