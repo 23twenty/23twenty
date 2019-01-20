@@ -1,11 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Headhesive from 'headhesive'
-import HamburgerMenu from './HamburgerMenu'
-import Logo from './Logo-Light.svg'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import Headhesive from 'headhesive';
+import HamburgerMenu from './HamburgerMenu';
+import LogoWhite from './Logo-Light.svg';
+import LogoBlack from './Logo-Black.svg';
 import './header.scss'
 
-import { Navbar } from 'reactstrap'
+import { Navbar } from 'reactstrap';
 
 
 class Header extends React.Component {
@@ -15,10 +17,24 @@ class Header extends React.Component {
     this.state = {
       isOpen: false,
     }
+
+    this._headerInit = null;
   }
+
+  static propTypes = {
+    isHome: PropTypes.bool
+  };
+
+  static defaultProps = {
+    isHome: false
+  };
 
   componentDidMount() {
     this._initStickyHeader();
+  }
+
+  componentWillUnmount() {
+    this._headerInit.destroy();
   }
 
   _toggle = () => this.setState(({isOpen}) => ({isOpen: !isOpen}));
@@ -34,7 +50,7 @@ class Header extends React.Component {
           unstick: 'banner--unstick',
         },
       };
-      new Headhesive('.navbar', options);
+      this._headerInit = new Headhesive('.navbar', options);
 
       window.addEventListener('resize', () => {
         if (window.innerWidth > 992 && this.state.isOpen === true) {
@@ -47,18 +63,20 @@ class Header extends React.Component {
   };
 
   render() {
-    const { isTransparent } = this.props;
+    const { isTransparent, isHome } = this.props;
     const { isOpen } = this.state;
     return (
-      <Navbar expand={false} className={`${isTransparent ? 'transparent absolute' : `solid`} text-uppercase inverse-text`}>
+      <Navbar expand={false}
+              className={`${isTransparent ? 'transparent absolute' : `solid`}
+                          ${isHome ? 'home' : ''} text-uppercase inverse-text`}>
         <div className="container">
           <MenuLink to="/" text="Home" />
-          <MenuLink to="/weddings" text="Weddings" />
-          <Link to="/">
-            <img className="logo" src={Logo} alt="website logo" />
+          <MenuLink to="/photo" text="Photo" />
+          <Link to="/photography">
+            <img className="logo" src={isHome ? LogoWhite : LogoBlack} alt="website logo" />
           </Link>
-          <MenuLink to="/investment" text="Investment" />
-          <MenuLink to="/about" text="About" />
+          <MenuLink to="/video" text="Video" />
+          <MenuLink to="/weddings" text="Weddings" />
           <HamburgerMenu isOpen={isOpen} toggle={this._toggle}/>
         </div>
       </Navbar>

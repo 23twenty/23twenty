@@ -15,18 +15,18 @@ const HamburgerMenu = ({isOpen, toggle}) => (
             </Link>
           </NavItem>
           <NavItem>
+            <Link to="/photo" className="nav-link">
+              Photography
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/video" className="nav-link">
+              Videography
+            </Link>
+          </NavItem>
+          <NavItem>
             <Link to="/weddings" className="nav-link">
               Weddings
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/investment" className="nav-link">
-              Investment
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/about" className="nav-link">
-              About
             </Link>
           </NavItem>
         </Nav>

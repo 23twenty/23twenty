@@ -5521,21 +5521,22 @@ video::-webkit-media-controls {
 .cbp-lazyload:after,
 .cbp-popup-loadingBox:after,
 .cbp-popup-singlePageInline:after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    margin-left: -20px;
-    background: #FFF;
-    border: 0 !important;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-radius: 50%;
-    -webkit-animation: tp-scaleout 1s infinite ease-in-out;
-    animation: tp-scaleout 1s infinite ease-in-out
+    //position: absolute;
+    //content: "";
+    //top: 50%;
+    //left: 50%;
+    //width: 40px;
+    //height: 40px;
+    //margin-top: -20px;
+    //margin-left: -20px;
+    //background: #FFF;
+    //border: 0 !important;
+    //-webkit-box-shadow: none;
+    //box-shadow: none;
+    //border-radius: 50%;
+    //-webkit-animation: tp-scaleout 1s infinite ease-in-out;
+    //animation: tp-scaleout 1s infinite ease-in-out
+//    TODO: is this needed? Created unexpected black dot;
 }
 
 .cbp:after,

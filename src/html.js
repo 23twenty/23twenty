@@ -13,6 +13,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+          <link href="styles/plugins.css" rel="stylesheet" type="text/css"/>
         </head>
         <body>
           <div
@@ -20,6 +21,8 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script src="js/jquery.min.js"></script>
+          <script src="js/plugins.js"></script>
         </body>
       </html>
     );

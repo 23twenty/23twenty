@@ -16,7 +16,7 @@
 
     .desktop-link {
         a {
-            color: white;
+            color: black;
             font-family: 'Barlow Semi Condensed', sans-serif;
             font-size: 1.3rem;
             letter-spacing: 0.4em;
@@ -46,6 +46,16 @@
 
     &.absolute {
         position: absolute;
+    }
+
+    &.home {
+        .desktop-link a {
+            color: white;
+
+            &:hover {
+                color: #a26327;
+            }
+        }
     }
 }
 
@@ -386,7 +396,7 @@
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
-    background: rgba(21, 21, 21, 0.3)
+    background: rgba(21, 21, 21, 0.5)
 }
 
 .navbar.nav-wrapper-dark {

@@ -1,0 +1,29 @@
+.photos-wrapper {
+  .about-us-image {
+    //TODO: Replace with BTS image...
+    //background-image: url('../../content/images/pages/about/background.jpg');
+    margin-bottom: 20px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .portfolio-wrapper {
+    padding: 0 20px 40px 20px;
+  }
+
+  .intro {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .noLink {
+    .cbp-filter-item:hover {
+      cursor: inherit;
+      color: inherit;
+    }
+  }
+}
+

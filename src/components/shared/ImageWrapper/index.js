@@ -11,7 +11,7 @@ function renderImage(file) {
   )
 }
 
-const MyImg = function(props) {
+const ImageWrapper = function(props) {
   return (
     <StaticQuery
       query={graphql`
@@ -33,13 +33,9 @@ const MyImg = function(props) {
           }
         }
       `}
-      render={({ images }) =>
-        renderImage(
-          images.edges.find(image => image.node.relativePath === props.src)
-        )
-      }
+      render={({ images }) => renderImage(images.edges.find(image => image.node.relativePath === props.src))}
     />
   )
-}
+};
 
-export default MyImg
+export default ImageWrapper

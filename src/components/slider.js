@@ -4,16 +4,16 @@ import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const Slider = ({images}) => {
-  const slides = images.map(({node}) => {
-    const img = node.childImageSharp;
+  const slides = images.map(({img}) => {
+    const image = img.childImageSharp;
     return {
-      original: img.fluid.src,
-      thumbnail: img.fixed.src
+      original: image.fluid.src,
+      thumbnail: image.fixed.src
     }
   });
   return <div className="slider-wrapper">
     <ImageGallery items={slides}
-                  autoPlay={true}
+                  autoPlay={false}
                   additionalClass="home-slider"
                   showNav={false}
                   showPlayButton={false}/>
