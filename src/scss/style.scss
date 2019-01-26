@@ -6587,7 +6587,8 @@ list-blue i {
         align-items: center;
         -ms-flex-pack: justify;
         -webkit-box-pack: justify;
-        justify-content: space-between;
+        //justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         margin: 0 auto;
     }

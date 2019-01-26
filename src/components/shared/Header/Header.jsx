@@ -70,13 +70,13 @@ class Header extends React.Component {
               className={`${isTransparent ? 'transparent absolute' : `solid`}
                           ${isHome ? 'home' : ''} text-uppercase inverse-text`}>
         <div className="container">
-          <MenuLink to="/" text="Home" />
+          {/*<MenuLink to="/" text="Home" />*/}
           <MenuLink to="/photo" text="Photo" />
-          <Link to="/photography">
+          <Link to="/">
             <img className="logo" src={isHome ? LogoWhite : LogoBlack} alt="website logo" />
           </Link>
           <MenuLink to="/video" text="Video" />
-          <MenuLink to="/weddings" text="Weddings" />
+          {/*<MenuLink to="/weddings" text="Weddings" />*/}
           <HamburgerMenu isOpen={isOpen} toggle={this._toggle}/>
         </div>
       </Navbar>
