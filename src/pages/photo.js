@@ -58,7 +58,7 @@ export const query = graphql`
     allFile(
       filter: {
         extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/home/" }
+        dir: { regex: "/pages/photo/" }
       },
       sort: { fields: [name], order: ASC}
       ){

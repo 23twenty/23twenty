@@ -23,7 +23,7 @@ class InstagramFeed extends Component {
                   userId="9144106797"
                   limit="6"
                   ref="instafeed"
-                  resolution="low_resolution"
+                  resolution="thumbnail"
                   sortBy="most-recent"
                   target="instafeed"
                   template={`<div class="item col-6 col-sm-4 col-md-2"><figure className="overlay overlay3"><a href="{{link}}" target="_blank"><span className="bg"></span><img src="{{image}}" /><figcaption className="d-flex"><div className="align-self-center mx-auto"><i className="fa fa-instagram"></i></div></figcaption></figure></div>`}

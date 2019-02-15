@@ -81,9 +81,6 @@ export const query = graphql`
             resize(width: 180, height: 180, quality: 100, cropFocus: ENTROPY) {
               src
             }
-            fixed(height: 90, width: 150) {
-              ...GatsbyImageSharpFixed
-            }
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
