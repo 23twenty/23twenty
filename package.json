@@ -26,7 +26,6 @@
     "gatsby-source-filesystem": "2.0.8",
     "gatsby-transformer-sharp": "^2.1.10",
     "headhesive": "^1.2.4",
-    "instafeed": "^2.0.0",
     "npm": "^6.5.0",
     "progressbar.js": "^1.0.1",
     "react-icons": "^3.2.2",

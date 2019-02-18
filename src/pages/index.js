@@ -24,38 +24,40 @@ class Index extends React.Component {
 
   render() {
     const { data, location } = this.props;
-    const sliderImages = data.sliderImages.images;
+    const sliderImages = data.sliderImgWide.images;
+    const photoImg = data.photo.images[0].img.childImageSharp.fluid;
+    const videoImg = data.video.images[0].img.childImageSharp.fluid;
     return (
         <Layout location={location} transparentHeader isHome={true}>
           <Meta site={siteMetadata} title="Home" />
-          <Slider images={sliderImages} />
+          <Slider images={data} />
           <div className="container home-wrapper">
             <h2 className="intro-heading">We capture your <span className="rotating">Moment, Brand, Beauty, Energy, Message, Love, Passion</span></h2>
             <div className="row">
               <div className="col-md-6">
-                <MainLink image={sliderImages[1].img.childImageSharp.fluid} linkTo="/photo" caption="Photography"/>
+                <MainLink image={photoImg} linkTo="/photo" caption="Photography"/>
               </div>
               <div className="col-md-6">
-                <MainLink image={sliderImages[2].img.childImageSharp.fluid} linkTo="/video" caption="Videography"/>
+                <MainLink image={videoImg} linkTo="/video" caption="Videography"/>
               </div>
             </div>
           </div>
-          <ParallaxContainer caption="Behind The Lens" imgUrl="img/background.jpg" className='about-us-image'/>
-          <div className="about-wrapper gray-wrapper">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-6 me-img">
-                  <Img fluid={sliderImages[1].img.childImageSharp.fluid}/>
-                </div>
-                <div className="col">
-                  <p>Hey! My name is Brian Kilpatrick. I have an insatiable appetite for high quality photography & video.
-                    I'm also a husband, father, software developer, musician, & die-hard Philadelphia Eagles fan.
-                    I'd love to work with you to create something great! Shoot me an email at <a href="mailto:brian@23twenty.com">brian@23twenty.com</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/*<ParallaxContainer caption="Behind The Lens" imgUrl="img/background.jpg" className='about-us-image'/>*/}
+          {/*<div className="about-wrapper gray-wrapper">*/}
+            {/*<div className="container">*/}
+              {/*<div className="row">*/}
+                {/*<div className="col-lg-6 me-img">*/}
+                  {/*<Img fluid={sliderImages[1].img.childImageSharp.fluid}/>*/}
+                {/*</div>*/}
+                {/*<div className="col">*/}
+                  {/*<p>Hey! My name is Brian Kilpatrick. I have an insatiable appetite for high quality photography & video.*/}
+                    {/*I'm also a husband, father, software developer, musician, & die-hard Philadelphia Eagles fan.*/}
+                    {/*I'd love to work with you to create something great! Shoot me an email at <a href="mailto:brian@23twenty.com">brian@23twenty.com</a>*/}
+                  {/*</p>*/}
+                {/*</div>*/}
+              {/*</div>*/}
+            {/*</div>*/}
+          {/*</div>*/}
           <InstagramFeed />
         </Layout>
     )
@@ -66,10 +68,10 @@ export default Index
 
 export const query = graphql`
   query AllImages {
-    sliderImages: allFile(
+    sliderImg: allFile(
       filter: {
         extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/home-slider/" }
+        dir: { regex: "/pages/home/slider/mobile/" }
         sourceInstanceName: { eq: "images" }
       },
       sort: { fields: [name], order: ASC}
@@ -78,9 +80,63 @@ export const query = graphql`
         img: node {
           relativePath
           childImageSharp {
-            resize(width: 180, height: 180, quality: 100, cropFocus: ENTROPY) {
-              src
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
+          }
+        }
+      }
+    }
+    sliderImgWide: allFile(
+      filter: {
+        extension: { regex: "/(jpeg|jpg|gif|png)/" }
+        dir: { regex: "/pages/home/slider/desktop/" }
+        sourceInstanceName: { eq: "images" }
+      },
+      sort: { fields: [name], order: ASC}
+      ) {
+      images: edges {
+        img: node {
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    video: allFile(
+      filter: {
+        extension: { regex: "/(jpeg|jpg|gif|png)/" }
+        dir: { regex: "/pages/home/video/" }
+        sourceInstanceName: { eq: "images" }
+      },
+      sort: { fields: [name], order: ASC}
+      ) {
+      images: edges {
+        img: node {
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    photo: allFile(
+      filter: {
+        extension: { regex: "/(jpeg|jpg|gif|png)/" }
+        dir: { regex: "/pages/home/photo/" }
+        sourceInstanceName: { eq: "images" }
+      },
+      sort: { fields: [name], order: ASC}
+      ) {
+      images: edges {
+        img: node {
+          relativePath
+          childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
