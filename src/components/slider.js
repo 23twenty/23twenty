@@ -3,11 +3,22 @@ import './slider.scss'
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const Slider = ({images}) => {
-  const slides = images.map(({img}) => {
-    const image = img.childImageSharp;
+const Slider = ({images: {sliderImg, sliderImgWide}}) => {
+  const slides = sliderImg.images.map((data, i) => {
+    const imgMobile = data.img.childImageSharp;
+    const imgDesktop = sliderImgWide.images[i].img.childImageSharp;
     return {
-      original: image.fluid.src
+      original: imgMobile.fluid.src,
+      imageSet: [
+        {
+          srcSet: imgMobile.fluid.src,
+          media: '(max-width: 1280px)',
+        },
+        {
+          srcSet: imgDesktop.fluid.src,
+          media: '(min-width: 1280px)',
+        }
+      ]
     }
   });
   return <div className="slider-wrapper">
