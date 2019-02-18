@@ -64,7 +64,6 @@ export const query = graphql`
       ){
         images: edges {
           img: node {
-            relativePath
             responsive: childImageSharp {
               resize(height: 480, quality: 100) {
                 src

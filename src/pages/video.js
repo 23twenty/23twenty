@@ -24,7 +24,7 @@ class Video extends React.Component {
             <div className="video-wrapper-inner">
               <video preload="metadata" playsInline={true} autoPlay={true} muted={true} loop={true}>
                 {/*TODO: replace video*/}
-                <source src="img/swimming.mp4" type="video/mp4"/>
+                <source src="img/video-web.mp4" type="video/mp4"/>
               </video>
               <div className="content-overlay">
                 <div className="container text-center">
@@ -42,7 +42,7 @@ class Video extends React.Component {
             </div>
             <div className="row">
               <div className="col align-self-center">
-                <Plyr type="youtube" videoId="nHkgTssUeWQ"/>
+                <Plyr type="vimeo" videoId="317924561"/>
               </div>
             </div>
           </div>

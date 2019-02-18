@@ -59,6 +59,24 @@
     }
 }
 
+//Mobile
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0 !important;
+        .container {
+            padding: 0;
+        }
+        .hamburger {
+            height: initial;
+        }
+        .logo {
+            height: 50px;
+            position: relative;
+            right: 40px;
+        }
+    }
+}
+
 
 
 
