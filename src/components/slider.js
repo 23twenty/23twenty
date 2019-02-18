@@ -11,11 +11,11 @@ const Slider = ({images: {sliderImg, sliderImgWide}}) => {
       original: imgMobile.fluid.src,
       imageSet: [
         {
-          srcSet: imgMobile.fluid.src,
+          srcSet: imgMobile.fluid.srcSet,
           media: '(max-width: 1280px)',
         },
         {
-          srcSet: imgDesktop.fluid.src,
+          srcSet: imgDesktop.fluid.srcSet,
           media: '(min-width: 1280px)',
         }
       ]
@@ -23,9 +23,10 @@ const Slider = ({images: {sliderImg, sliderImgWide}}) => {
   });
   return <div className="slider-wrapper">
     <ImageGallery items={slides}
-                  autoPlay={true}
+                  autoPlay={false}
                   additionalClass="home-slider"
                   showNav={false}
+                  showBullets={true}
                   showThumbnails={false}
                   showPlayButton={false}/>
   </div>;

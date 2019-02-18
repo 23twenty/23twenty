@@ -6,13 +6,23 @@
     position: absolute;
     .image-gallery-slides {
       height: 100vh;
+      .image-gallery-slide {
+        height: 100%;
+        .image-gallery-image {
+          height: 100%;
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
     }
 
     //moves thumbnails into slider...
-    .image-gallery-thumbnails {
-      bottom: 73px;
-      position: relative;
-    }
+    //.image-gallery-thumbnails {
+    //  bottom: 73px;
+    //  position: relative;
+    //}
   }
 
   .title {

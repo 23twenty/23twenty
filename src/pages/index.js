@@ -78,7 +78,6 @@ export const query = graphql`
       ) {
       images: edges {
         img: node {
-          relativePath
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -97,7 +96,6 @@ export const query = graphql`
       ) {
       images: edges {
         img: node {
-          relativePath
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -116,7 +114,6 @@ export const query = graphql`
       ) {
       images: edges {
         img: node {
-          relativePath
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -135,7 +132,6 @@ export const query = graphql`
       ) {
       images: edges {
         img: node {
-          relativePath
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
