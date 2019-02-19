@@ -1,0 +1,1 @@
+{"errors":[{"message":"Invalid flags supplied to RegExp constructor 'slider'","locations":[{"line":2,"column":3}],"path":["sliderImg"]},{"message":"Invalid flags supplied to RegExp constructor 'slider-wide'","locations":[{"line":17,"column":3}],"path":["sliderImgWide"]}],"data":{"sliderImg":null,"sliderImgWide":null},"pageContext":{}}
