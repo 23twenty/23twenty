@@ -28,7 +28,7 @@ class Photo extends React.Component {
           <Meta site={siteMetadata} title="Photography" />
           <div className="photos-wrapper">
             {/*Title*/}
-            <ParallaxContainer caption="Photography" imgUrl="img/background.jpg" className='about-us-image'/>
+            <ParallaxContainer caption="Photography" imgUrl="img/background.jpg" className='photos-image'/>
             {/*Content*/}
             <div className="intro noLink">
               <h1 className="intro-title">What we love to shoot</h1>

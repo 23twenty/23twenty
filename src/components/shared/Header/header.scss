@@ -14,6 +14,12 @@
         }
     }
 
+    .hamburger {
+        &:before, &:after, .navbar-toggler-icon {
+            background: black !important;
+        }
+    }
+
     .desktop-link {
         a {
             color: black;
@@ -48,6 +54,12 @@
         position: absolute;
     }
 
+    .mobile-only.navbar-collapse {
+        position: absolute;
+        width: 100%;
+        top: 66px;
+    }
+
     &.home {
         .desktop-link a {
             color: white;
@@ -56,7 +68,20 @@
                 color: #a26327;
             }
         }
+
+        .hamburger {
+            &:before, &:after, .navbar-toggler-icon {
+                background: white !important;
+            }
+        }
+
+        .mobile-only.navbar-collapse {
+            position: inherit;
+            width: 100%;
+        }
     }
+
+
 }
 
 //Mobile

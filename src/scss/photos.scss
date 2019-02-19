@@ -1,8 +1,12 @@
 .photos-wrapper {
-  .about-us-image {
+  .photos-image {
     //TODO: Replace with BTS image...
     //background-image: url('../../content/images/pages/about/background.jpg');
     margin-bottom: 20px;
+    .inner {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 
   .title {

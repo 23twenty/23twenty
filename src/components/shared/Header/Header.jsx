@@ -5,7 +5,7 @@ import Headhesive from 'headhesive';
 import HamburgerMenu from './HamburgerMenu';
 import LogoWhite from './Logo-Light.svg';
 import LogoBlack from './Logo-Black.svg';
-import './header.scss'
+import './header.scss';
 
 import { Navbar } from 'reactstrap';
 

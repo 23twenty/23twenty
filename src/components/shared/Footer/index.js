@@ -20,8 +20,8 @@ const Footer = () => (
       <div className="container inner text-center">
         <img src={Logo} className="footer-logo" />
         <div className="space25" />
-        <p>© 2018 Brailie. All rights reserved. Theme by elemis.</p>
-        <div className="space30" />
+        <p className="contact-heading">Get In Touch</p>
+        <a className="contact-email" href="mailto:Brian@23Twenty.com">Brian@23Twenty.com</a>
         <ul className="social social-bg social-s">
           <li>
             <a href="https://www.facebook.com/23twentymedia/" target="_blank">

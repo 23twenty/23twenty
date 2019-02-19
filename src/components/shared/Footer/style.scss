@@ -38,3 +38,19 @@ footer p {
   letter-spacing: normal;
   padding: 12px 14px 14px 14px;
 }
+
+.contact-heading {
+  padding-top: 10px;
+  font-size: 1.2em;
+}
+
+.contact-email {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  display: inline-block;
+
+  &:hover {
+    color: darkgrey;
+  }
+}

@@ -42,7 +42,7 @@ class Video extends React.Component {
             </div>
             <div className="row">
               <div className="col align-self-center">
-                <Plyr type="vimeo" videoId="317924561"/>
+                <Plyr type="vimeo" videoId="https://vimeo.com/317924561"/>
               </div>
             </div>
           </div>
