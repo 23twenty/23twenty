@@ -25,7 +25,7 @@ module.exports = {
       options: {
         name: '23twentymedia',
         short_name: '23twentymedia',
-        description: 'Photography | Videography in Philadelphia, Pennsylvania',
+        description: 'Photography | Videography in Philadelphia, Pennsylvania and beyond',
         homepage_url: 'https://www.23twenty.com',
         start_url: '/',
         background_color: '#fff',
@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: '',
+        trackingId: 'UA-134867932-1',
       },
     },
     {

@@ -21,7 +21,7 @@ const Footer = () => (
         <img src={Logo} className="footer-logo" />
         <div className="space25" />
         <p className="contact-heading">Get In Touch</p>
-        <a className="contact-email" href="mailto:Brian@23Twenty.com">Brian@23Twenty.com</a>
+        <a className="contact-email" href="mailto:brian@23Twenty.com">brian@23Twenty.com</a>
         <ul className="social social-bg social-s">
           <li>
             <a href="https://www.facebook.com/23twentymedia/" target="_blank">

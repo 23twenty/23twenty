@@ -3,26 +3,17 @@
   height: 100vh;
 
   .home-slider {
-    position: absolute;
-    .image-gallery-slides {
-      height: 100vh;
-      .image-gallery-slide {
+    height: 100%;
+    .slick-list {
+      height: 100%;
+      .slick-track {
         height: 100%;
-        .image-gallery-image {
-          height: 100%;
-          img {
-            height: 100%;
-            object-fit: cover;
-          }
+        .slider-img {
+          object-fit: cover;
         }
       }
     }
 
-    //moves thumbnails into slider...
-    //.image-gallery-thumbnails {
-    //  bottom: 73px;
-    //  position: relative;
-    //}
   }
 
   .title {
