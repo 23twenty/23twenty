@@ -4,7 +4,7 @@ module.exports = {
     description: 'Photography | Videography in Philadelphia, Pennsylvania',
     siteUrl: 'https://23twenty.com',
   },
-  pathPrefix: '/23twenty',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-plugin-sharp`,
