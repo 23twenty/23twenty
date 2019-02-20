@@ -8,7 +8,7 @@ import '../scss/photos.scss';
 import ParallaxContainer from '../components/ParalaxContainer';
 import '../lib/cubeportfolio';
 import'../lib/cubeportfolio.css';
-import 'lightgallery.js';
+import '../lib/lightgallery.js';
 import 'lightgallery.js/dist/css/lightgallery.css';
 import initCubeGallery from "../components/cubegallery";
 import bgImg from '../../content/images/pages/home/background.jpg';

@@ -14,23 +14,26 @@ import '../lib/videowrapper';
 class Video extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      windowWidth: 0
+    }
   }
 
   componentDidMount() {
     initVideoWrapper();
-    //   const backgroundVideo = new BackgroundVideo('.bv-video')
+    this.setState({windowWidth: window.innerWidth})
   }
 
   render() {
     const { location } = this.props;
-    const { innerWidth } = window;
+    const { windowWidth } = this.state;
     return (
         <Layout location={location}>
           <Meta site={siteMetadata} title="Videography"/>
           <div className="video-wrapper inverse-text aos-init aos-animate" data-aos="fade">
             <div className="video-wrapper-inner">
               <video preload="metadata" playsInline={true} autoPlay={true} muted={true} loop={true}>
-                <source src={innerWidth < 768 ? videoMobile : video} type="video/mp4"/>
+                <source src={windowWidth < 768 ? videoMobile : video} type="video/mp4"/>
               </video>
               <div className="content-overlay">
                 <div className="container text-center">

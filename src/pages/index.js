@@ -10,7 +10,7 @@ import { Link } from "gatsby";
 import '../scss/index.scss';
 
 import '../lib/morphext.css';
-import '../lib/morphtext'
+import '../lib/morphtext';
 import 'animate.css/animate.css';
 import ParallaxContainer from "../components/ParalaxContainer";
 
