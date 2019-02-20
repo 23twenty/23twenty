@@ -5,9 +5,9 @@ import Footer from '../Footer'
 import 'modern-normalize/modern-normalize.css'
 import '../../../scss/main.scss'
 
-const Layout = ({transparentHeader, children, isHome}) => (
+const Layout = ({ children, isHome}) => (
     <div className="content-wrapper">
-      <Header isTransparent={transparentHeader} isHome={isHome}/>
+      <Header isHome={isHome}/>
       {children}
       <Footer />
     </div>

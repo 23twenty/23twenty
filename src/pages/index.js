@@ -9,7 +9,8 @@ import Img from "gatsby-image";
 import { Link } from "gatsby";
 import '../scss/index.scss';
 
-import '../morphext.css';
+import '../lib/morphext.css';
+import '../lib/morphtext'
 import 'animate.css/animate.css';
 import ParallaxContainer from "../components/ParalaxContainer";
 
@@ -28,7 +29,7 @@ class Index extends React.Component {
     const photoImg = data.photo.images[0].img.childImageSharp.fluid;
     const videoImg = data.video.images[0].img.childImageSharp.fluid;
     return (
-        <Layout location={location} transparentHeader isHome={true}>
+        <Layout location={location} isHome={true}>
           <Meta site={siteMetadata} title="Home" />
           <Slider images={data} />
           <div className="container home-wrapper">
@@ -80,7 +81,7 @@ export const query = graphql`
         img: node {
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -98,7 +99,7 @@ export const query = graphql`
         img: node {
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -116,7 +117,7 @@ export const query = graphql`
         img: node {
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -134,7 +135,7 @@ export const query = graphql`
         img: node {
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }

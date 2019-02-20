@@ -42,7 +42,7 @@ export const query = graphql`
                 src
               }
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid
               }
               fixed(width: 800, quality: 100) {
                 ...GatsbyImageSharpFixed

@@ -4,8 +4,14 @@ import Meta from '../components/shared/Meta'
 import Layout from '../components/shared/Layout'
 import { siteMetadata } from '../../gatsby-config'
 import '../scss/photos.scss';
-import initCubeGallery from "../components/cubegallery";
+
 import ParallaxContainer from '../components/ParalaxContainer';
+import '../lib/cubeportfolio';
+import'../lib/cubeportfolio.css';
+import 'lightgallery.js';
+import 'lightgallery.js/dist/css/lightgallery.css';
+import initCubeGallery from "../components/cubegallery";
+import bgImg from '../../content/images/pages/home/background.jpg';
 
 class Photo extends React.Component {
   constructor(props) {
@@ -13,12 +19,27 @@ class Photo extends React.Component {
   }
 
   componentDidMount() {
+    lightGallery(document.getElementById('cube-grid'), {
+      thumbnail: false,
+      selector: 'a',
+      mode: 'lg-fade',
+      download: false,
+      autoplayControls: false,
+      zoom: false,
+      fullScreen: false,
+      videoMaxWidth: '1000px',
+      loop: false,
+      hash: true,
+      mousewheel: true,
+      videojs: true,
+      share: false
+    });
     initCubeGallery();
   }
 
   _renderGallery = () => {
     const { images } = this.props.data.allFile;
-    return images.map(({img}) => <CubeGridImage img={img}/>)
+    return images.map(({img}, i) => <CubeGridImage key={Math.random() * i} img={img}/>)
   };
 
   render() {
@@ -28,7 +49,7 @@ class Photo extends React.Component {
           <Meta site={siteMetadata} title="Photography" />
           <div className="photos-wrapper">
             {/*Title*/}
-            <ParallaxContainer caption="Photography" imgUrl="img/background.jpg" className='photos-image'/>
+            <ParallaxContainer caption="Photography" imgUrl={bgImg} className='photos-image'/>
             {/*Content*/}
             <div className="intro noLink">
               <h1 className="intro-title">What we love to shoot</h1>
@@ -69,7 +90,7 @@ export const query = graphql`
                 src
               }
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid
               }
               fixed(quality: 100) {
                 ...GatsbyImageSharpFixed

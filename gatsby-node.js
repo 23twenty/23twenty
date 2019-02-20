@@ -1,6 +1,6 @@
 const path = require('path')
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, plugins }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -8,5 +8,33 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         scss: path.resolve(__dirname, 'src/scss'),
       },
     },
+    module: {
+      rules: [
+        {
+          test: require.resolve('jquery'),
+          use: [{
+            loader: 'expose-loader',
+            options: 'jQuery'
+          }, {
+            loader: 'expose-loader',
+            options: '$'
+          }]
+        },
+        {
+          test: require.resolve('background-video'),
+          use: [{
+            loader: 'expose-loader',
+            options: 'BackgroundVideo'
+          }]
+        },
+      ]
+    },
+    plugins: [
+      plugins.provide({
+        $: "jquery",
+        jQuery: "jquery",
+        BackgroundVideo: 'background-video'
+      })
+    ]
   })
 }

@@ -2107,7 +2107,7 @@ ol {
 }
 
 .swiper-button-next:before {
-    content: "\f105";
+    content: "\f105" !important;
 }
 
 .swiper-slide .link-wrapper {
@@ -5451,7 +5451,7 @@ video::-webkit-media-controls {
 }
 
 .lg-actions .lg-next:before {
-    content: "\f105"
+    content: "\f105" !important;
 }
 
 .lg-actions .lg-prev:after {

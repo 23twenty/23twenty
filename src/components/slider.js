@@ -23,10 +23,9 @@ const Slider = ({images: {sliderImg, sliderImgWide}}) => {
   });
   return <div className="slider-wrapper">
     <ImageGallery items={slides}
-                  autoPlay={false}
+                  autoPlay={true}
                   additionalClass="home-slider"
                   showNav={false}
-                  showBullets={true}
                   showThumbnails={false}
                   showPlayButton={false}/>
   </div>;

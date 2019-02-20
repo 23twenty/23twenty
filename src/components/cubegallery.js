@@ -1,23 +1,5 @@
 const initCubeGallery = () => {
-  /*-----------------------------------------------------------------------------------*/
-  /*	LIGHTGALLERY
-  /*-----------------------------------------------------------------------------------*/
-  var $lg = $('.light-gallery');
-  $lg.lightGallery({
-    thumbnail: false,
-    selector: 'a',
-    mode: 'lg-fade',
-    download: false,
-    autoplayControls: false,
-    zoom: false,
-    fullScreen: false,
-    videoMaxWidth: '1000px',
-    loop: false,
-    hash: true,
-    mousewheel: true,
-    videojs: true,
-    share: false
-  });
+
   /*-----------------------------------------------------------------------------------*/
   /*	CUBE
   /*-----------------------------------------------------------------------------------*/

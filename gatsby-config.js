@@ -4,7 +4,7 @@ module.exports = {
     description: 'Photography | Videography in Philadelphia, Pennsylvania',
     siteUrl: 'https://23twenty.com',
   },
-  pathPrefix: '/',
+  pathPrefix: '/23twenty',
   plugins: [
     {
       resolve: `gatsby-plugin-sharp`,
@@ -25,24 +25,24 @@ module.exports = {
       options: {
         name: '23twentymedia',
         short_name: '23twentymedia',
-        description: 'Photography Videography in Philadelphia, Pennsylvania',
-        homepage_url: 'https://23twenty.com',
+        description: 'Photography | Videography in Philadelphia, Pennsylvania',
+        homepage_url: 'https://www.23twenty.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
         display: 'standalone',
-        icons: [
-          {
-            src: '/img/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        // icons: [
+        //   {
+        //     src: '/img/android-chrome-192x192.png',
+        //     sizes: '192x192',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: '/img/android-chrome-512x512.png',
+        //     sizes: '512x512',
+        //     type: 'image/png',
+        //   },
+        // ],
       },
     },
     {

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Headhesive from 'headhesive';
 import HamburgerMenu from './HamburgerMenu';
-import LogoWhite from './Logo-Light.svg';
-import LogoBlack from './Logo-Black.svg';
+import LogoWhite from './LogoWhite';
+import LogoBlack from './LogoBlack';
 import './header.scss';
 
 import { Navbar } from 'reactstrap';
@@ -16,7 +16,8 @@ class Header extends React.Component {
 
     this.state = {
       isOpen: false,
-    }
+      isFixed: false
+    };
 
     this._headerInit = null;
   }
@@ -39,7 +40,7 @@ class Header extends React.Component {
 
   _toggle = () => this.setState(({isOpen}) => ({isOpen: !isOpen}));
 
-  _initStickyHeader = () => {
+  _initStickyHeader = (that = this) => {
     if (typeof window !== 'undefined') {
       let options = {
         offset: 350,
@@ -49,6 +50,14 @@ class Header extends React.Component {
           stick: 'banner--stick',
           unstick: 'banner--unstick',
         },
+        onStick() {
+          if(that.props.isHome) return;
+          that.setState({isFixed: true})
+        },
+        onUnstick() {
+          if(that.props.isHome) return;
+          that.setState({isFixed: false})
+        }
       };
       this._headerInit = new Headhesive('.navbar', options);
 
@@ -63,17 +72,17 @@ class Header extends React.Component {
   };
 
   render() {
-    const { isTransparent, isHome } = this.props;
-    const { isOpen } = this.state;
+    const { isHome } = this.props;
+    const { isOpen, isFixed } = this.state;
+
     return (
       <Navbar expand={false}
-              className={`${isTransparent ? 'transparent absolute' : `solid`}
-                          ${isHome ? 'home' : ''} text-uppercase inverse-text`}>
+              className={`${isHome ? 'home transparent absolute' : ''} text-uppercase inverse-text solid`}>
         <div className="container">
           {/*<MenuLink to="/" text="Home" />*/}
           <MenuLink to="/photo" text="Photo" />
           <Link to="/">
-            <img className="logo" src={isHome ? LogoWhite : LogoBlack} alt="website logo" />
+            {isHome || isFixed ? <LogoWhite/> : <LogoBlack/>}
           </Link>
           <MenuLink to="/video" text="Video" />
           {/*<MenuLink to="/weddings" text="Weddings" />*/}
@@ -89,7 +98,7 @@ export default Header;
 
 const MenuLink = ({to, text}) => (
     <div className="desktop-link">
-      <Link to={to} className="d-none d-lg-block">
+      <Link to={to} className="d-none d-sm-block">
         {text}
       </Link>
       <div className="underline"></div>

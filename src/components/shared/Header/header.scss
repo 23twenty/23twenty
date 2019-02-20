@@ -81,11 +81,17 @@
         }
     }
 
+    &.banner--stick {
+        .desktop-link a {
+            color: white;
+        }
+    }
+
 
 }
 
 //Mobile
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .navbar {
         padding: 0.5rem 0 !important;
         .container {
