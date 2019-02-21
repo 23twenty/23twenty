@@ -12,6 +12,14 @@
     src: url("../lib/fontawesome/fontawesome-webfont.woff");
 }
 
+html {
+    overflow-x: hidden;
+}
+
+.scroll-up-button {
+    z-index: 3;
+}
+
 .space70 {
     height: 70px;
 }

@@ -7,7 +7,7 @@ import './style.scss'
 const Footer = () => (
   <footer className="dark-wrapper inverse-text">
     <div id="scrollUp">
-      <ScrollToTop showUnder={400}>
+      <ScrollToTop className="scroll-up-button" showUnder={400}>
         <span className="btn btn-square btn-full-rounded btn-icon ">
           <i className="scroll-up">
             <FaChevronUp />

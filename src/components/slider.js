@@ -12,8 +12,8 @@ const Slider = ({images: {sliderImg, sliderImgWide}}) => {
     const imgDesktop = sliderImgWide.images[i].img.childImageSharp;
     return (
         <picture key={Math.random()}>
-          <source srcSet={imgMobile.fluid.srcSet} media="(max-width: 735px)"/>
-          <source srcSet={imgDesktop.fluid.srcSet} media="(min-width: 736px)"/>
+          <source srcSet={imgMobile.fluid.srcSet} media="(max-width: 410px)"/>
+          <source srcSet={imgDesktop.fluid.srcSet} media="(min-width: 411px)"/>
           <img className="slider-img" src={imgMobile.fluid.src} alt="Portfolio Image"/>
         </picture>
     )
