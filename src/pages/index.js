@@ -32,7 +32,7 @@ class Index extends React.Component {
     const myImg = data.me.images[0].img.childImageSharp.fluid;
     return (
         <Layout location={location} isHome={true}>
-          <Meta site={siteMetadata} title="Photography | Videography in Philadelphia, Pennsylvania" />
+          <Meta site={siteMetadata} title="" />
           <Slider images={data} />
           <div className="container home-wrapper">
             <h2 className="intro-heading">We capture your <span className="rotating">Moment, Brand, Beauty, Energy, Message, Love, Passion</span></h2>

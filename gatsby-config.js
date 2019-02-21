@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: '23twentymedia',
-    description: 'Photography | Videography in Philadelphia, Pennsylvania',
-    siteUrl: 'https://23twenty.com',
+    title: '23Twenty Media | Photography & Videography in Philadelphia, Pennsylvania',
+    description: 'High Quality Photography & Videography servicing Philadelphia, Pennsylvania, the tri-state region and the world.',
+    siteUrl: 'https://www.23twenty.com',
   },
   pathPrefix: '/',
   plugins: [
@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: '23twentymedia',
-        short_name: '23twentymedia',
+        name: '23Twenty Media',
+        short_name: '23Twenty Media',
         description: 'Photography | Videography in Philadelphia, Pennsylvania and beyond',
         homepage_url: 'https://www.23twenty.com',
         start_url: '/',
