@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: '23Twenty Media | Photography & Videography in Philadelphia, Pennsylvania',
-    description: 'High Quality Photography & Videography servicing Philadelphia, Pennsylvania, the tri-state region and the world.',
+    description: 'High Quality Photography & Videography servicing Philadelphia, New Jersey, Delaware, NYC & Nationwide. Wedding & Portrait Photography.',
     siteUrl: 'https://www.23twenty.com',
   },
   pathPrefix: '/',
