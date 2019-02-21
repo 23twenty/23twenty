@@ -9,17 +9,17 @@
 /sw.js
   Cache-Control: no-cache
 /offline-plugin-app-shell-fallback/
-  Link: </webpack-runtime-ba17e390065f214dd5c2.js>; rel=preload; as=script
+  Link: </webpack-runtime-fb4d4817c1cef89c3b1c.js>; rel=preload; as=script
   Link: </component---node-modules-gatsby-plugin-offline-app-shell-js-4c3230ab5935f128b889.js>; rel=preload; as=script
 /
-  Link: </webpack-runtime-ba17e390065f214dd5c2.js>; rel=preload; as=script
+  Link: </webpack-runtime-fb4d4817c1cef89c3b1c.js>; rel=preload; as=script
   Link: </styles.895e131ea362e9283dda.css>; rel=preload; as=script
 /investment/
-  Link: </webpack-runtime-ba17e390065f214dd5c2.js>; rel=preload; as=script
+  Link: </webpack-runtime-fb4d4817c1cef89c3b1c.js>; rel=preload; as=script
   Link: </styles.895e131ea362e9283dda.css>; rel=preload; as=script
 /photo/
-  Link: </webpack-runtime-ba17e390065f214dd5c2.js>; rel=preload; as=script
+  Link: </webpack-runtime-fb4d4817c1cef89c3b1c.js>; rel=preload; as=script
   Link: </styles.895e131ea362e9283dda.css>; rel=preload; as=script
 /video/
-  Link: </webpack-runtime-ba17e390065f214dd5c2.js>; rel=preload; as=script
+  Link: </webpack-runtime-fb4d4817c1cef89c3b1c.js>; rel=preload; as=script
   Link: </styles.895e131ea362e9283dda.css>; rel=preload; as=script
