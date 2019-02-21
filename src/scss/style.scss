@@ -324,6 +324,19 @@ h1.post-title,
     margin-bottom: 20px;
 }
 
+@media (max-width: 500px) {
+    .image-wrapper {
+        .heading {
+            font-size: 30px;
+        }
+        .inner {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+}
+
 .sub-heading {
     font-size: 32px;
     line-height: 44px;
