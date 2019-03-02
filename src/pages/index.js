@@ -26,7 +26,6 @@ class Index extends React.Component {
 
   render() {
     const { data, location } = this.props;
-    const sliderImages = data.sliderImgWide.images;
     const photoImg = data.photo.images[0].img.childImageSharp.fluid;
     const videoImg = data.video.images[0].img.childImageSharp.fluid;
     const myImg = data.me.images[0].img.childImageSharp.fluid;
