@@ -86,7 +86,7 @@ export const query = graphql`
         images: edges {
           img: node {
             responsive: childImageSharp {
-              resize(height: 480, quality: 100) {
+              resize(height: 800, quality: 100) {
                 src
               }
               fluid(quality: 100) {

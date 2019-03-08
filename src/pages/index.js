@@ -2,18 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Meta from '../components/shared/Meta'
 import Layout from '../components/shared/Layout'
-import Slider from '../components/slider'
+import SliderView from '../components/SliderView'
 import InstagramFeed from '../components/shared/Instafeed'
 import { siteMetadata } from '../../gatsby-config'
 import Img from "gatsby-image";
 import { Link } from "gatsby";
 import '../scss/index.scss';
-
 import '../lib/morphext.css';
 import '../lib/morphtext';
 import 'animate.css/animate.css';
-import ParallaxContainer from "../components/ParalaxContainer";
-import bgImg from '../../content/images/pages/home/background.jpg';
 
 class Index extends React.Component {
   componentDidMount() {
@@ -28,11 +25,10 @@ class Index extends React.Component {
     const { data, location } = this.props;
     const photoImg = data.photo.images[0].img.childImageSharp.fluid;
     const videoImg = data.video.images[0].img.childImageSharp.fluid;
-    const myImg = data.me.images[0].img.childImageSharp.fluid;
     return (
         <Layout location={location} isHome={true}>
           <Meta site={siteMetadata} title="" />
-          <Slider images={data} />
+          <SliderView images={data} />
           <div className="container home-wrapper">
             <h2 className="intro-heading">We capture your <span className="rotating">Moment, Brand, Beauty, Energy, Message, Love, Passion</span></h2>
             <div className="row">

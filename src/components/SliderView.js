@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 // import ImageGallery from 'react-image-gallery';
 // import "react-image-gallery/styles/css/image-gallery.css";
 
-const Slider = ({images: {sliderImg, sliderImgWide}}) => {
+const SliderView = ({images: {sliderImg, sliderImgWide}}) => {
   const slides = sliderImg.images.map((data, i) => {
     const imgMobile = data.img.childImageSharp;
     const imgDesktop = sliderImgWide.images[i].img.childImageSharp;
@@ -21,14 +21,12 @@ const Slider = ({images: {sliderImg, sliderImgWide}}) => {
   return (
       <div className="slider-wrapper">
         <ReactSlick children={slides}
+                    pauseOnHover={false}
                     className="home-slider"
                     autoplay={true}
-                    infinite={true}
-                    speed={500}
-                    slidesToShow={1}
-                    slidesToScroll={1} />
+                    infinite={true}/>
       </div>
   )
 };
 
-export default Slider;
+export default SliderView;

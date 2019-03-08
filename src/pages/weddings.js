@@ -15,7 +15,7 @@ const Weddings = ({ location, data }) => {
       <Layout location={location}>
         <Meta site={siteMetadata} title="Weddings" />
         <ParallaxContainer caption="Weddings" imgUrl={bgImg} className='wedding-image'/>
-        <div className="wedding-wrapper">
+        <div className="wedding-wrapper gray-wrapper">
           <div className="content">
             <div className="coming-soon-text">
               <h1>Hang Tight!</h1>

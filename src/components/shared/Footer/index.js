@@ -6,10 +6,10 @@ import './style.scss'
 
 const Footer = () => (
   <footer className="dark-wrapper inverse-text">
-    <div id="scrollUp">
-      <ScrollToTop className="scroll-up-button" showUnder={400}>
+    <div id="scroll-up">
+      <ScrollToTop showUnder={400}>
         <span className="btn btn-square btn-full-rounded btn-icon ">
-          <i className="scroll-up">
+          <i className="scroll-up-icon">
             <FaChevronUp />
           </i>
         </span>
@@ -21,7 +21,9 @@ const Footer = () => (
         <img src={Logo} className="footer-logo" />
         <div className="space25" />
         <p className="contact-heading">Get In Touch</p>
-        <a className="contact-email" href="mailto:brian@23Twenty.com">brian@23Twenty.com</a>
+        <a className="contact-link" href="tel:267-223-7837">(267) 223-7837</a>
+        <br/>
+        <a className="contact-link" href="mailto:brian@23Twenty.com">brian@23Twenty.com</a>
         <ul className="social social-bg social-s">
           <li>
             <a href="https://www.facebook.com/23twentymedia/" target="_blank">

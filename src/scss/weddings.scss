@@ -1,16 +1,18 @@
 .wedding-wrapper {
-  margin: 50px 0;
+  margin: -75px 0 75px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .bridal-img {
     width: 800px;
-    box-shadow: 5px 5px 5px rgba(0,0,0, .1);
+    border: 10px double lightgray;
+
   }
 
   .coming-soon-text {
-    border: 1px solid lightgray;
+    text-align: center;
+    border: 10px double lightgray;
     width: 300px;
     z-index: 1;
     padding: 20px;
@@ -18,7 +20,7 @@
     top: 230px;
     background: white;
     right: 101px;
-    box-shadow: 5px 5px 25px rgba(0,0,0,0.2);
+    //box-shadow: 5px 5px 25px rgba(0,0,0,0.2);
 
     hr {
       padding-top: 5px;
@@ -35,9 +37,11 @@
 
 @media (max-width: 768px) {
   .wedding-wrapper {
-
+    margin: 0;
     .bridal-img {
       width: initial;
+      border: none;
+      box-shadow: 5px 5px 5px rgba(0,0,0, .1);
     }
 
     .content {
@@ -47,6 +51,7 @@
       position: static;
       border: none;
       box-shadow: none;
+      width: initial;
     }
   }
 
