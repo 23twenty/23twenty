@@ -44,21 +44,6 @@ class Index extends React.Component {
               </div>
             </div>
           </div>
-          <ParallaxContainer caption="Behind The Lens" imgUrl={bgImg} className='about-us-image'/>
-          <div className="about-wrapper gray-wrapper">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-md-9">
-                        <Img className="my-portrait" fluid={myImg}/>
-                        <p className="intro-content">Hey! My name is Brian Kilpatrick. I started 23Twenty Media out of an insatiable
-                            appetite for high quality imagery. Creatively & beautifully capturing once in a lifetime moments, ideas, & brands is my passion. I'd love to work with you to create something great!
-                            I'm also a husband, father, software developer, musician, & die-hard Philadelphia Eagles fan.
-                            Shoot me an email and lets talk! <a href="mailto:brian@23twenty.com">brian@23twenty.com</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-          </div>
           <InstagramFeed />
         </Layout>
     )

@@ -24,11 +24,16 @@ const HamburgerMenu = ({isOpen, toggle}) => (
               Videography
             </Link>
           </NavItem>
-          {/*<NavItem>*/}
-            {/*<Link to="/weddings" className="nav-link">*/}
-              {/*Weddings*/}
-            {/*</Link>*/}
-          {/*</NavItem>*/}
+          <NavItem>
+            <Link to="/weddings" className="nav-link">
+              Weddings
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
+          </NavItem>
         </Nav>
         <div className="navbar-divider" />
         <ul className="social social-mute social-s">
