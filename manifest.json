@@ -1,6 +1,7 @@
 {
   "main.js": "render-page.js",
   "main.js.map": "render-page.js.map",
+  "static/Dress.jpg": "static/Dress-7b7526e95f0e361049ed3556e1fcfe6c.jpg",
   "static/background.jpg": "static/background-461a12a863d391921f9075ef8fbc10c0.jpg",
   "static/video-web-mobile.mp4": "static/video-web-mobile-e4b898632d79b906a67eac639c92031f.mp4",
   "static/video-web.mp4": "static/video-web-52c783a56fed686ab5a2fa9a2923e8c7.mp4"
