@@ -43,10 +43,20 @@ class Video extends React.Component {
             </div>
           </div>
           <div className="container inner main-wrapper">
-            <p>Small events to full production commercials and everything inbetween. <br/> We've got you covered with amazing, professional video content.</p>
+            <p>Small events to full production commercials and everything in between. <br/> We've got you covered with amazing, professional video content.</p>
+            <div className="row">
+              <div className="col align-self-center">
+                <Plyr className="styled-shoot" type="vimeo" videoId="331809951"/>
+              </div>
+            </div>
             <div className="row">
               <div className="col align-self-center">
                 <Plyr className="give-back-video" type="youtube" videoId="9JC3t6FjuRY"/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col align-self-center">
+                <Plyr className="proposal" type="vimeo" videoId="331423258"/>
               </div>
             </div>
             <div className="row">

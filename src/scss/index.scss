@@ -1,5 +1,5 @@
-h1 {
-  font-family: 'Bebas-Bold';
+h1, .section-title {
+  font-family: 'Bebas-Bold' !important;
   font-weight: bold;
   font-size: 4em;
   line-height: 1em;
@@ -9,7 +9,7 @@ h1 {
   padding: 100px 20px;
 
   .intro-heading {
-    font-family: 'Bebas-Bold';
+    font-family: 'Bebas-Bold' !important;
     font-weight: bold;
    text-align: center;
    font-size: 5.5vw;
@@ -27,7 +27,7 @@ h1 {
   }
 
   .title {
-    font-family: 'Bebas-Bold';
+    font-family: 'Bebas-Bold' !important;
     font-weight: bold;
     font-size: 4em;
   }

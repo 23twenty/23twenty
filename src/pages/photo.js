@@ -85,14 +85,12 @@ export const query = graphql`
       ){
         images: edges {
           img: node {
+            name
             responsive: childImageSharp {
               resize(height: 800, quality: 100) {
                 src
               }
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-              fixed(quality: 100) {
+              fixed(width: 1920, quality: 100) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -102,10 +100,10 @@ export const query = graphql`
   }
 `;
 
-const CubeGridImage = ({img: { responsive: { fluid, resize}}}) => (
+const CubeGridImage = ({img: { responsive: { resize, fixed}}}) => (
     <div className="cbp-item">
       <figure className="overlay overlay2">
-        <a data-sizes={fluid.sizes} data-srcset={fluid.srcSet} data-src={fluid.src}>
+        <a data-srcset={fixed.srcSet} data-src={fixed.src}>
           <span className="bg"></span>
           <img src={resize.src} alt=""/>
         </a>

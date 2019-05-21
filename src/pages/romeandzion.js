@@ -3,12 +3,13 @@ import Meta from 'components/shared/Meta'
 import Layout from 'components/shared/Layout'
 import { siteMetadata } from '../../gatsby-config'
 import {graphql} from "gatsby";
-import Img from 'gatsby-image';
 import '../scss/rome-and-zion.scss';
 import Gallery from 'react-photo-gallery';
+import Plyr from 'react-plyr';
+import '../lib/plyr.css';
 
 
-const RomeAndZion = ({data: { location, cover, romeandzion: {images}}}) => {
+const RomeAndZion = ({data: { location, romeandzion: {images}}}) => {
   const _renderGallery = () => {
     return images.map(({img: {responsive: { fixed: { srcSet, width, height} }}}, i) => ({ srcSet, width, height }))
   };
@@ -21,16 +22,17 @@ const RomeAndZion = ({data: { location, cover, romeandzion: {images}}}) => {
             <div className="col">
               <h1>Rome + Zion // Engagement Photo Shoot</h1>
               <p className="sub-text">Philadelphia Magic Gardens - April 12, 2019</p>
-              <Img className="header-image" fluid={cover.responsive.fluid} />
+              <Plyr className="proposal" type="vimeo" videoId="331423258"/>
             </div>
           </div>
           <div className="row">
-            <div className="col main-content">
+            <div className="col main-content align-self-center">
               <p>
                 Romhay & Zion were so amazing to shoot! Their excitement for their new journey together made my job easy!
                 Even a place as visually "busy" as The Philadelphia Magic Gardens can work wonderfully if done right!
                 The Gardens became a colorful, vibrant, & imaginative backdrop that perfectly suited these two.
               </p>
+              <p>We also had the honor of capturing the proposal with video!</p>
               <p>Congrats to this gorgeous couple! It was an honor to capture this moment for you!</p>
               <p>~ Brian</p>
             </div>
@@ -62,13 +64,6 @@ export const query = graphql`
               ...GatsbyImageSharpFixed
             }
           }
-        }
-      }
-    }
-    cover: file(relativePath: { eq: "pages/romeandzion/cover.jpg"}) {
-      responsive: childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid
         }
       }
     }
