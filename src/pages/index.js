@@ -15,7 +15,7 @@ import 'animate.css/animate.css';
 class Index extends React.Component {
   componentDidMount() {
     $('.rotating').Morphext({
-      animation: 'flipInX',
+      animation: 'fadeIn',
       separator: ',',
       speed: 2000
     });
@@ -31,12 +31,36 @@ class Index extends React.Component {
           <SliderView images={data} />
           <div className="container home-wrapper">
             <h2 className="intro-heading">We capture your <span className="rotating">Moment, Brand, Beauty, Energy, Message, Love, Passion</span></h2>
+            <p>
+              <span className="title">Hey! </span>
+              We are 23Twenty Media, a photography & video company set on capturing beauty, creativity, and uniqueness in
+              everything and everyone that graces our lenses! We are based out of Philadelphia, PA but can travel world-wide
+              to create something great! Although 23Twenty Media is a company, it is the sole brain child and passion of Brian Kilpatrick
+              (I will personally be there every step of the way!). Take a look around and lets talk soon!
+            </p>
+          </div>
+          <div className="container grey-wrapper portfolio">
             <div className="row">
+              <div className="col">
+                <h1 className="align-center">Portfolio</h1>
+              </div>
+            </div>
+            <div className="row portfolio-links">
               <div className="col-md-6">
                 <MainLink image={photoImg} linkTo="/photo" caption="Photography"/>
               </div>
               <div className="col-md-6">
                 <MainLink image={videoImg} linkTo="/video" caption="Videography"/>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
+                <h1>Featured Blog Posts</h1>
+                <MainLink image={data.sliderImgWide.images[1].img.childImageSharp.fluid}
+                          linkTo="/romeandzion" caption="Rome + Zion"/>
+                <p>Philadelphia Magic Gardens Engagement Session - April 11th, 2019</p>
               </div>
             </div>
           </div>

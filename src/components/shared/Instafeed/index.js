@@ -10,7 +10,6 @@ class InstagramFeed extends Component {
 
   render() {
     return (
-      <div className="gray-wrapper">
         <div className="container inner">
           <h2 className="section-title text-center">Instagram Feed</h2>
           <p className="lead text-center">
@@ -37,9 +36,7 @@ class InstagramFeed extends Component {
               Instagram Page
             </a>
           </div>
-        </div>
-      </div>
-    )
+        </div>    )
   }
 }
 

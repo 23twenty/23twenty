@@ -1,10 +1,19 @@
+h1 {
+  font-family: 'Bebas-Bold';
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 1em;
+}
+
 .home-wrapper  {
-  padding: 140px 20px;
+  padding: 100px 20px;
 
   .intro-heading {
+    font-family: 'Bebas-Bold';
+    font-weight: bold;
    text-align: center;
-   font-size: 3.5vw;
-   padding-bottom: 120px;
+   font-size: 5.5vw;
+   padding-bottom: 200px;
 
     .rotating {
       padding: 10px;
@@ -17,35 +26,54 @@
     }
   }
 
+  .title {
+    font-family: 'Bebas-Bold';
+    font-weight: bold;
+    font-size: 4em;
+  }
+
   .text-content {
     width: 600px;
   }
 
 }
 
-.about-wrapper {
-  padding: 75px 0;
+//.about-wrapper {
+//  padding: 75px 0;
+//
+//  .my-portrait {
+//    width: 300px;
+//    float: left;
+//    border-radius: 50%;
+//    shape-outside: circle();
+//    margin-right: 30px;
+//    box-shadow: 0 11px 20px rgba(0, 0, 0, .2);
+//  }
+//
+//  .intro-content {
+//    font-family: "Muli", sans-serif;
+//    font-weight: 400;
+//    font-size: 20px;
+//    //line-height: 36px;
+//    color: #606060;
+//    margin-top: 33px;
+//    a {
+//      color: inherit;
+//    }
+//  }
+//}
 
-  .my-portrait {
-    width: 300px;
-    float: left;
-    border-radius: 50%;
-    shape-outside: circle();
-    margin-right: 30px;
-    box-shadow: 0 11px 20px rgba(0, 0, 0, .2);
+.portfolio {
+  h1 {
+    margin-bottom: 50px;
   }
+  .portfolio-links {
+    margin-bottom: 200px;
+  }
+}
 
-  .intro-content {
-    font-family: "Muli", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    //line-height: 36px;
-    color: #606060;
-    margin-top: 33px;
-    a {
-      color: inherit;
-    }
-  }
+.align-center {
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -73,7 +101,17 @@
   .home-wrapper {
     .intro-heading {
       white-space: nowrap;
-      font-size: 1.5em;
+      font-size: 2.3em;
+    }
+
+    .title {
+      font-size: 2em;
+    }
+  }
+
+  .portfolio {
+    .portfolio-links {
+      margin-bottom: 100px;
     }
   }
 }

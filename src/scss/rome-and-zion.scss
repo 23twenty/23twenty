@@ -1,0 +1,27 @@
+.rome-and-zion-wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  h1, .sub-text {
+    text-align: center;
+  }
+
+  .sub-text {
+    font-style: italic;
+    color: #888;
+  }
+
+  .main-content {
+    margin-top: 20px;
+  }
+
+  .header-image {
+    width: 100%
+  }
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    //width: initial !important;
+    //height: initial !important;
+  }
+}

@@ -27,6 +27,10 @@ exports.onCreateWebpackConfig = ({ actions, plugins }) => {
             options: 'BackgroundVideo'
           }]
         },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          loader: "file-loader"
+        }
       ]
     },
     plugins: [

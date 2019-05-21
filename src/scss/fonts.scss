@@ -5,11 +5,18 @@
 @font-face {
     font-family: 'Slimicons';
     src: url('../fonts/slimicons/Slimicons.eot?ofrduu');
-    src: url('../fonts/slimicons/Slimicons.eot?ofrduu#iefix') format('embedded-opentype'),
+    src: url('../fonts/slimicons/Slimicons.eot?ouu#iefixfrd') format('embedded-opentype'),
         url('../fonts/slimicons/Slimicons.ttf?ofrduu') format('truetype'),
         url('../fonts/slimicons/Slimicons.woff?ofrduu') format('woff'),
         url('../fonts/slimicons/Slimicons.svg?ofrduu#Slimicons') format('svg');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas-Bold';
+    src: url("/styles/BebasNeue-Bold.ttf?ofrduu") format('truetype');
+    font-weight: bold;
     font-style: normal;
 }
 
