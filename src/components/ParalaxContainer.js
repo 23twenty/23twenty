@@ -19,7 +19,7 @@ class ParallaxContainer extends React.Component {
         return (
             <div className={`wrapper image-wrapper bg-image inverse-text ${className} ${isMobile ? 'mobile' : ''}`} style={{backgroundImage: `url(${imgUrl})`}}>
                 <div className="container inner pt-120 pb-120 text-center">
-                    <h1 className="heading mb-0">{caption}</h1>
+                    <span className="heading mb-0 header-text">{caption}</span>
                 </div>
             </div>
         )

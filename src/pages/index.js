@@ -42,7 +42,7 @@ class Index extends React.Component {
           <div className="container grey-wrapper portfolio">
             <div className="row">
               <div className="col">
-                <h1 className="align-center">Portfolio</h1>
+                <div className="align-center header-text">Portfolio</div>
               </div>
             </div>
             <div className="row portfolio-links">
@@ -57,7 +57,7 @@ class Index extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-sm-6">
-                <h1>Featured Blog Posts</h1>
+                <span className="header-text">Featured Blog Posts</span>
                 <MainLink image={data.sliderImgWide.images[1].img.childImageSharp.fluid}
                           linkTo="/romeandzion" caption="Rome + Zion"/>
                 <p>Philadelphia Magic Gardens Engagement Session - April 11th, 2019</p>
@@ -175,7 +175,7 @@ const MainLink = ({image, linkTo, caption}) => (
       </Link>
       <figcaption className="d-flex">
         <div className="align-self-center mx-auto">
-          <h1 className="mb-0">{caption}</h1>
+          <span className="header-text mb-0">{caption}</span>
         </div>
       </figcaption>
     </figure>

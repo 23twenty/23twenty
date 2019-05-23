@@ -52,7 +52,7 @@ class Photo extends React.Component {
             <ParallaxContainer caption="Photography" imgUrl={bgImg} className='photos-image'/>
             {/*Content*/}
             <div className="intro noLink">
-              <h1 className="intro-title">What we love to shoot</h1>
+              <div className="intro-title header-text">What we love to shoot</div>
               <div className="cbp-filter-item">Portraits</div>
               <div className="cbp-filter-item">Weddings/Engagement</div>
               <div className="cbp-filter-item">Events/Concerts</div>

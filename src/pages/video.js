@@ -37,7 +37,7 @@ class Video extends React.Component {
               </video>
               <div className="content-overlay">
                 <div className="container text-center">
-                  <h1 className="heading mb-0">Videography</h1>
+                  <span className="heading mb-0 header-text">Videography</span>
                 </div>
               </div>
             </div>
