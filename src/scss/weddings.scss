@@ -1,13 +1,18 @@
 .wedding-wrapper {
-  //margin: -75px 0 75px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 50px;
 
   .bridal-img {
     width: 800px;
     border: 10px double lightgray;
 
+  }
+
+  .slider-wrapper {
+    .wedding-slider-img {
+      img {
+        object-fit: scale-down !important;
+      }
+    }
   }
 
   .coming-soon-text {
@@ -32,12 +37,14 @@
     }
   }
 
-
+  .text-content {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 768px) {
   .wedding-wrapper {
-    margin: 0;
+    margin: 50px 0 0 0;
     .bridal-img {
       width: initial;
       border: none;
@@ -52,6 +59,10 @@
       border: none;
       box-shadow: none;
       width: initial;
+    }
+
+    .slider-wrapper {
+      height: 300px;
     }
   }
 
