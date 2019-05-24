@@ -7,6 +7,13 @@
 @import './fonts.scss';
 @import './style';
 
+.header-text, .section-title {
+    font-family: 'Bebas-Bold' !important;
+    font-weight: bold !important;
+    font-size: 4em !important;
+    line-height: 1em !important;
+}
+
 @font-face {
     font-family: "FontAwesome";
     src: url("../lib/fontawesome/fontawesome-webfont.woff");
@@ -36,4 +43,10 @@ html {
 
 p {
     font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .header-text, .section-title {
+        font-size: 2em !important;
+    }
 }
