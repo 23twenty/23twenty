@@ -9,6 +9,7 @@ import '../lib/plyr.css';
 import video from '../../content/video-web.mp4';
 import videoMobile from '../../content/video-web-mobile.mp4';
 import '../lib/videowrapper';
+import siteImg from '../../content/images/pages/video/site.jpg'
 
 
 class Video extends React.Component {
@@ -29,7 +30,7 @@ class Video extends React.Component {
     const { windowWidth } = this.state;
     return (
         <Layout location={location}>
-          <Meta site={siteMetadata} title="Videography"/>
+          <Meta site={siteMetadata} title="Videography" image={siteImg}/>
           <div className="video-wrapper inverse-text aos-init aos-animate" data-aos="fade">
             <div className="video-wrapper-inner">
               <video preload="metadata" playsInline={true} autoPlay={true} muted={true} loop={true}>

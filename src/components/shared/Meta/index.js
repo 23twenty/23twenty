@@ -21,10 +21,10 @@ const Meta = ({ site, title, image }) => {
             property: "og:url", content: siteUrl
         },
         {
-            property: "og:image", content: `${siteUrl}/img/site.jpg`
+            property: "og:image", content: image ?  siteUrl + image : `${siteUrl}/img/site.jpg`
         },
         {
-            property: "og:image:secure_url", content: `${siteUrl}/img/site.jpg`
+            property: "og:image:secure_url", content: image ?  siteUrl + image : `${siteUrl}/img/site.jpg`
         },
         {
             property: "og:image:alt", content: siteTitle

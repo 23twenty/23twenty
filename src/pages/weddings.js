@@ -8,6 +8,7 @@ import Img from 'gatsby-image';
 import {graphql} from "gatsby";
 import '../scss/weddings.scss';
 import bgImg from '../../content/images/pages/weddings/1.jpg';
+import siteImg from '../../content/images/pages/weddings/site.jpg';
 import ReactSlick from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -23,7 +24,7 @@ const Weddings = ({ location, data }) => {
   });
   return (
       <Layout location={location}>
-        <Meta site={siteMetadata} title="Weddings" />
+        <Meta site={siteMetadata} title="Weddings" image={siteImg}/>
         <ParallaxContainer caption="Weddings" imgUrl={bgImg} className='wedding-image'/>
         <div className="wedding-wrapper">
           <div className="content container">

@@ -7,6 +7,7 @@ import '../scss/rome-and-zion.scss';
 import Gallery from 'react-photo-gallery';
 import Plyr from 'react-plyr';
 import '../lib/plyr.css';
+import siteImg from '../../content/images/pages/romeandzion/cover.jpg'
 
 
 const RomeAndZion = ({data: { location, romeandzion: {images}}}) => {
@@ -16,7 +17,7 @@ const RomeAndZion = ({data: { location, romeandzion: {images}}}) => {
 
   return (
       <Layout location={location}>
-        <Meta site={siteMetadata} title="Rome + Zion Engagement Photo Shoot - Philadelphia Magic Gardens" />
+        <Meta site={siteMetadata} title="Rome + Zion Engagement Photo Shoot - Philadelphia Magic Gardens" image={siteImg}/>
         <div className="container rome-and-zion-wrapper">
           <div className="row">
             <div className="col">
