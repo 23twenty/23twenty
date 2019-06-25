@@ -4,14 +4,14 @@ import Meta from '../components/shared/Meta'
 import Layout from '../components/shared/Layout'
 import { siteMetadata } from '../../gatsby-config'
 import '../scss/photos.scss';
-
+import CubeGridImage from '../components/CubeGridImage';
 import ParallaxContainer from '../components/ParalaxContainer';
 import '../lib/cubeportfolio';
 import'../lib/cubeportfolio.css';
 import '../lib/lightgallery.js';
 import 'lightgallery.js/dist/css/lightgallery.css';
 import initCubeGallery from "../components/cubegallery";
-import bgImg from '../../content/images/pages/home/background.jpg';
+import bgImg from '../../content/images/background.jpg';
 
 class Photo extends React.Component {
   constructor(props) {
@@ -79,7 +79,7 @@ export const query = graphql`
     allFile(
       filter: {
         extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/photo/" }
+        dir: { regex: "/photo/" }
       },
       sort: { fields: [name], order: ASC}
       ){
@@ -99,14 +99,3 @@ export const query = graphql`
       }
   }
 `;
-
-const CubeGridImage = ({img: { responsive: { resize, fixed}}}) => (
-    <div className="cbp-item">
-      <figure className="overlay overlay2">
-        <a data-srcset={fixed.srcSet} data-src={fixed.src}>
-          <span className="bg"></span>
-          <img src={resize.src} alt=""/>
-        </a>
-      </figure>
-    </div>
-);

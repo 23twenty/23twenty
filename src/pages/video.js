@@ -9,7 +9,7 @@ import '../lib/plyr.css';
 import video from '../../content/video-web.mp4';
 import videoMobile from '../../content/video-web-mobile.mp4';
 import '../lib/videowrapper';
-import siteImg from '../../content/images/pages/video/site.jpg'
+import siteImg from '../../content/images/video/site.jpg'
 
 
 class Video extends React.Component {

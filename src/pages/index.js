@@ -23,8 +23,10 @@ class Index extends React.Component {
 
   render() {
     const { data, location } = this.props;
-    const photoImg = data.photo.images[0].img.childImageSharp.fluid;
-    const videoImg = data.video.images[0].img.childImageSharp.fluid;
+    const photoImg = data.photo.img.fluid;
+    const videoImg = data.video.img.fluid;
+    const weddingImg = data.wedding.img.fluid;
+    const blogImg = data.rome.img.fluid;
     return (
         <Layout location={location} isHome={true}>
           <Meta site={siteMetadata} title="" />
@@ -46,10 +48,13 @@ class Index extends React.Component {
               </div>
             </div>
             <div className="row portfolio-links">
-              <div className="col-md-6">
+              <div className="col-md-4">
+                <MainLink image={weddingImg} linkTo="/weddings" caption="Weddings"/>
+              </div>
+              <div className="col-md-4">
                 <MainLink image={photoImg} linkTo="/photo" caption="Photography"/>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-4">
                 <MainLink image={videoImg} linkTo="/video" caption="Videography"/>
               </div>
             </div>
@@ -58,7 +63,7 @@ class Index extends React.Component {
             <div className="row">
               <div className="col-sm-6">
                 <span className="header-text">Featured Blog Posts</span>
-                <MainLink image={data.sliderImgWide.images[1].img.childImageSharp.fluid}
+                <MainLink image={blogImg}
                           linkTo="/romeandzion" caption="Rome + Zion"/>
                 <p>Philadelphia Magic Gardens Engagement Session - April 11th, 2019</p>
               </div>
@@ -77,7 +82,7 @@ export const query = graphql`
     sliderImg: allFile(
       filter: {
         extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/home/slider/mobile/" }
+        dir: { regex: "/home/slider/mobile/" }
         sourceInstanceName: { eq: "images" }
       },
       sort: { fields: [name], order: ASC}
@@ -95,7 +100,7 @@ export const query = graphql`
     sliderImgWide: allFile(
       filter: {
         extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/home/slider/desktop/" }
+        dir: { regex: "/home/slider/desktop/" }
         sourceInstanceName: { eq: "images" }
       },
       sort: { fields: [name], order: ASC}
@@ -110,57 +115,31 @@ export const query = graphql`
         }
       }
     }
-    video: allFile(
-      filter: {
-        extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/home/video/" }
-        sourceInstanceName: { eq: "images" }
-      },
-      sort: { fields: [name], order: ASC}
-      ) {
-      images: edges {
-        img: node {
-          childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+    video: file(relativePath: {eq: "home/videopreview.jpg"}) {
+      img: childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-    photo: allFile(
-      filter: {
-        extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/home/photo/" }
-        sourceInstanceName: { eq: "images" }
-      },
-      sort: { fields: [name], order: ASC}
-      ) {
-      images: edges {
-        img: node {
-          childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+    photo: file(relativePath: {eq: "home/photopreview.jpg"}) {
+      img: childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-    me: allFile(
-      filter: {
-        extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/home/me/" }
-        sourceInstanceName: { eq: "images" }
-      },
-      sort: { fields: [name], order: ASC}
-      ) {
-      images: edges {
-        img: node {
-          childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+    wedding: file(relativePath: {eq: "home/wedding.jpg"}) {
+      img: childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    rome: file(relativePath: {eq: "home/rome.jpg"}) {
+      img: childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -2,14 +2,14 @@ import React from 'react';
 import Meta from '../components/shared/Meta'
 import Layout from '../components/shared/Layout'
 import ParallaxContainer from "../components/ParalaxContainer";
-import bgImg from "../../content/images/pages/home/background.jpg";
+import bgImg from "../../content/images/background.jpg";
 import {siteMetadata} from "../../gatsby-config";
 import Img from "gatsby-image";
 import {graphql} from "gatsby";
 import '../scss/about.scss';
 
 const About = ({location, data}) => {
-  const myImg = data.me.images[0].img.childImageSharp.fluid;
+  const myImg = data.me.img.fluid;
   return (
       <Layout location={location} >
         <Meta site={siteMetadata} title="About" />
@@ -38,21 +38,10 @@ const About = ({location, data}) => {
 
 export const query = graphql`
   query  {
-    me: allFile(
-      filter: {
-        extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/home/me/" }
-        sourceInstanceName: { eq: "images" }
-      },
-      sort: { fields: [name], order: ASC}
-      ) {
-      images: edges {
-        img: node {
-          childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+    me: file(relativePath: {eq: "about/me.jpg"}) {
+      img: childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

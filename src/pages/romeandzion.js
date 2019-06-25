@@ -1,5 +1,5 @@
 import React from 'react'
-import Meta from 'components/shared/Meta'
+import Meta from '../components/shared/Meta'
 import Layout from 'components/shared/Layout'
 import { siteMetadata } from '../../gatsby-config'
 import {graphql} from "gatsby";
@@ -7,7 +7,7 @@ import '../scss/rome-and-zion.scss';
 import Gallery from 'react-photo-gallery';
 import Plyr from 'react-plyr';
 import '../lib/plyr.css';
-import siteImg from '../../content/images/pages/romeandzion/cover.jpg'
+import siteImg from '../../content/images/romeandzion/cover.jpg'
 
 
 const RomeAndZion = ({data: { location, romeandzion: {images}}}) => {
@@ -21,7 +21,7 @@ const RomeAndZion = ({data: { location, romeandzion: {images}}}) => {
         <div className="container rome-and-zion-wrapper">
           <div className="row">
             <div className="col">
-              <h1>Rome + Zion // Engagement Photo Shoot</h1>
+              <span className="header-text">Rome + Zion // Engagement Photo Shoot</span>
               <p className="sub-text">Philadelphia Magic Gardens - April 12, 2019</p>
               <Plyr className="proposal" type="vimeo" videoId="331423258"/>
             </div>
@@ -53,7 +53,7 @@ export const query = graphql`
     romeandzion: allFile(
       filter: {
         extension: { regex: "/(jpeg|jpg|gif|png)/" }
-        dir: { regex: "/pages/romeandzion/" }
+        dir: { regex: "/romeandzion/" }
         sourceInstanceName: { eq: "images" }
       },
       sort: { fields: [name], order: ASC}
