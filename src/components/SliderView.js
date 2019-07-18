@@ -3,8 +3,6 @@ import './slider.scss';
 import ReactSlick from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// import ImageGallery from 'react-image-gallery';
-// import "react-image-gallery/styles/css/image-gallery.css";
 
 const SliderView = ({images: {sliderImg, sliderImgWide}}) => {
   const slides = sliderImg.images.map((data, i) => {

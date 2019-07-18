@@ -52,12 +52,18 @@ class Video extends React.Component {
             </div>
             <div className="row">
               <div className="col align-self-center">
-                <Plyr className="give-back-video" type="youtube" videoId="9JC3t6FjuRY"/>
+                <Plyr className="proposal" type="vimeo" videoId="331423258"/>
               </div>
             </div>
             <div className="row">
               <div className="col align-self-center">
-                <Plyr className="proposal" type="vimeo" videoId="331423258"/>
+                <Plyr className="roots" type="youtube" videoId="7bbq9aP1DSo"/>
+              </div>
+            </div>
+            <p>We recently collaborated with The Recording Academy (Grammys) for their coverage of The Roots Festival. We shot all of the b-roll in this segment.</p>
+            <div className="row">
+              <div className="col align-self-center">
+                <Plyr className="give-back-video" type="youtube" videoId="9JC3t6FjuRY"/>
               </div>
             </div>
             <div className="row">

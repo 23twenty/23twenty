@@ -4,18 +4,41 @@
 
 @font-face {
     font-family: 'Slimicons';
-    src: url('../fonts/slimicons/Slimicons.eot?ofrduu');
-    src: url('../fonts/slimicons/Slimicons.eot?ouu#iefixfrd') format('embedded-opentype'),
-        url('../fonts/slimicons/Slimicons.ttf?ofrduu') format('truetype'),
-        url('../fonts/slimicons/Slimicons.woff?ofrduu') format('woff'),
-        url('../fonts/slimicons/Slimicons.svg?ofrduu#Slimicons') format('svg');
+    src: url('/type/slimicons/Slimicons.eot?ofrduu');
+    src: url('/type/slimicons/Slimicons.eot?ouu#iefixfrd') format('embedded-opentype'),
+        url('/type/slimicons/Slimicons.ttf?ofrduu') format('truetype'),
+        url('/type/slimicons/Slimicons.woff?ofrduu') format('woff'),
+        url('/type/slimicons/Slimicons.svg?ofrduu#Slimicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("/type/fontawesome/fontawesome-webfont.eot?v=4.7.0");
+    src: url("/type/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format('embedded-opentype'),
+    url("/type/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format('svg'),
+    url("/type/fontawesome/fontawesome-webfont.ttf") format('truetype'),
+    url("/type/fontawesome/fontawesome-webfont.woff") format('woff'),
+    url("/type/fontawesome/fontawesome-webfont.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lg';
+    src: url("/type/lg/lg.eot?v=4.7.0");
+    src: url("/type/lg/lg.eot?#iefix&v=4.7.0") format('embedded-opentype'),
+    url("/type/lg/lg.svg?v=4.7.0#fontawesomeregular") format('svg'),
+    url("/type/lg/lg.ttf") format('truetype'),
+    url("/type/lg/lg.woff") format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bebas-Bold';
-    src: url("/styles/BebasNeue-Bold.ttf?ofrduu") format('truetype');
+    src: url("/type/BebasNeue-Bold.ttf?ofrduu") format('truetype');
     font-weight: bold;
     font-style: normal;
 }

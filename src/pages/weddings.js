@@ -68,7 +68,7 @@ class Weddings extends React.Component {
                     <ReactSlick children={this._getSlides()}
                                 pauseOnHover={false}
                                 className="home-slider"
-                                autoplay={false}
+                                autoplay={true}
                                 infinite={true}/>
                   </div>
                 </div>
@@ -76,15 +76,13 @@ class Weddings extends React.Component {
               <div className="text-content row">
                 <div className="col">
                   <div className="header-text">
-                    Your love. <br/>Vibrant. <br/>Alive. <br/>Modern. <br/>Timeless.
+                     Vibrant. <br/>Alive. <br/>Modern. <br/>Timeless. <br/> Your love captured perfectly.
                   </div>
                   <br/>
                   <p>
-                    We at 23Twenty Media strive to capture your once in a lifetime moment in that very
-                    same way. We are not people with "good cameras". As tried & true imaging professionals, provide a
-                    unique visual legacy of emotion, love, & laughter. Photography & Video are truly one of the few
-                    investments of your wedding day that will last generations. We'd be honored to tell your story! We also
-                    know wedding planning can be stressful, so we aim to make this process as painless as possible.
+                    Your once in a lifetime moment should be captured in that very same way. Our mission is to provide you with a
+                    unique visual legacy of love, joy & emotion that will last lifetimes. Your story deserves to be artfully
+                    preserved & we'd be honored to help you tell it! We also know wedding planning can be stressful, so we aim to make this process as painless as possible.
                     We will work with you or your team to make sure your day and memories are captured in an optimal fashion.
                   </p>
                   <div className="portfolio-wrapper">
@@ -95,12 +93,12 @@ class Weddings extends React.Component {
                   <p><b>Pricing:</b></p>
                   <p><i>We know every wedding is unique, with unique needs. Please contact us at <a href="mailto:brian@23twenty.com">brian@23twenty.com</a></i> to discuss your special day</p>
                   <p><b>
-                    Individual (Photography or Video) wedding packages start at $2,000 - includes 2 shooters, 8 hours of coverage, and all high resolution digital images.
+                    Individual (Photography or Video) wedding packages start at $2,000 - includes 2 shooters, 6 hours of coverage, and all high resolution digital images.
                   </b></p>
                   <p><b>
-                    Photography & Video packages start at $3,000
+                    Photography & Video packages start at $3,000.
                   </b></p>
-                  <p><b>Fully designed wedding albums and fine art wall prints are available for an additional cost</b></p>
+                  <p><b>Fully designed wedding albums and fine art wall prints are also available as package add ons.</b></p>
                 </div>
               </div>
             </div>
