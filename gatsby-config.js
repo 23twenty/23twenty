@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: '23Twenty Media | Photography & Videography in Philadelphia, Pennsylvania',
-    description: 'High Quality Photography & Videography servicing Philadelphia, New Jersey, Delaware, NYC & Nationwide.',
+    title: '23Twenty Media | Philadelphia Wedding Photography | Philadelphia Wedding Cinematography',
+    description: 'Virbrant & Modern Wedding Photography & Cinematography servicing Philadelphia, New Jersey, Delaware, NYC & Nationwide.',
     siteUrl: 'https://www.23twenty.com',
   },
   pathPrefix: '/',
@@ -74,4 +74,4 @@ module.exports = {
     'gatsby-plugin-twitter',
     'gatsby-transformer-sharp',
   ],
-}
+};

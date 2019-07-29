@@ -1,16 +1,16 @@
 import React from 'react'
-import Meta from '../components/shared/Meta'
-import Layout from 'components/shared/Layout'
-import { siteMetadata } from '../../gatsby-config'
+import Meta from '../../components/shared/Meta'
+import Layout from '../../components/shared/Layout'
+import { siteMetadata } from '../../../gatsby-config'
 import {graphql} from "gatsby";
-import '../scss/rome-and-zion.scss';
+import '../../scss/rome-and-zion.scss';
 import Gallery from 'react-photo-gallery';
 import Plyr from 'react-plyr';
-import '../lib/plyr.css';
-import siteImg from '../../content/images/romeandzion/cover.jpg'
+import '../../lib/plyr.css';
+import siteImg from '../../../content/images/romeandzion/philadelphia-engagement-photoshoot-magic-gardens-01.jpg'
 
 
-const RomeAndZion = ({data: { location, romeandzion: {images}}}) => {
+const PhiladelphiaEngagementPhotoShootMagicGardens = ({data: { location, romeandzion: {images}}}) => {
   const _renderGallery = () => {
     return images.map(({img: {responsive: { fixed: { srcSet, width, height} }}}, i) => ({ srcSet, width, height }))
   };
@@ -21,7 +21,7 @@ const RomeAndZion = ({data: { location, romeandzion: {images}}}) => {
         <div className="container rome-and-zion-wrapper">
           <div className="row">
             <div className="col">
-              <span className="header-text">Rome + Zion // Engagement Photo Shoot</span>
+              <h1 className="header-text">Rome + Zion // Philadelphia Engagement Photo Shoot</h1>
               <p className="sub-text">Philadelphia Magic Gardens - April 12, 2019</p>
               <Plyr className="proposal" type="vimeo" videoId="331423258"/>
             </div>
@@ -71,4 +71,4 @@ export const query = graphql`
   }
 `;
 
-export default RomeAndZion
+export default PhiladelphiaEngagementPhotoShootMagicGardens

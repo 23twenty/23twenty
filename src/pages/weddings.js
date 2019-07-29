@@ -80,8 +80,9 @@ class Weddings extends React.Component {
                   </div>
                   <br/>
                   <p>
-                    Your once in a lifetime moment should be captured in that very same way. Our mission is to provide you with a
-                    unique visual legacy of love, joy & emotion that will last lifetimes. Your story deserves to be artfully
+                    Your once in a lifetime moment should be captured in that very same way. We are 23Twenty, a photography
+                    & cinematography studio. Our style is bold, vibraant, authentic, & modern. Our mission is to provide you with a
+                    unique visual legacy of love, joy & emotion that will last lifetimes. Your <b><i>story</i></b> deserves to be artfully
                     preserved & we'd be honored to help you tell it! We also know wedding planning can be stressful, so we aim to make this process as painless as possible.
                     We will work with you or your team to make sure your day and memories are captured in an optimal fashion.
                   </p>
