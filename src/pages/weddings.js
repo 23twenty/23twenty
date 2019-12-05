@@ -18,6 +18,7 @@ import'../lib/cubeportfolio.css';
 import '../lib/lightgallery.js';
 import 'lightgallery.js/dist/css/lightgallery.css';
 import initCubeGallery from "../components/cubegallery";
+import WeddingLogo from '../components/weddings/weddingLogo';
 
 class Weddings extends React.Component {
 
@@ -61,48 +62,11 @@ class Weddings extends React.Component {
           <Meta site={siteMetadata} title="Weddings" image={siteImg}/>
           <ParallaxContainer caption="Weddings" imgUrl={bgImg} className='wedding-image'/>
           <div className="wedding-wrapper">
-            <div className="content container">
-              <div className="row">
-                <div className="col">
-                  <div className="slider-wrapper">
-                    <ReactSlick children={this._getSlides()}
-                                pauseOnHover={false}
-                                className="home-slider"
-                                autoplay={true}
-                                infinite={true}/>
-                  </div>
-                </div>
-              </div>
-              <div className="text-content row">
-                <div className="col">
-                  <div className="header-text">
-                     Vibrant. <br/>Alive. <br/>Modern. <br/>Timeless. <br/> Your love captured perfectly.
-                  </div>
-                  <br/>
-                  <p>
-                    Your once in a lifetime moment should be captured in that very same way. We are 23Twenty, a photography
-                    & cinematography studio. Our style is bold, vibraant, authentic, & modern. Our mission is to provide you with a
-                    unique visual legacy of love, joy & emotion that will last lifetimes. Your <b><i>story</i></b> deserves to be artfully
-                    preserved & we'd be honored to help you tell it! We also know wedding planning can be stressful, so we aim to make this process as painless as possible.
-                    We will work with you or your team to make sure your day and memories are captured in an optimal fashion.
-                  </p>
-                  <div className="portfolio-wrapper">
-                    <div id="cube-grid" className="cbp light-gallery">
-                      {this._renderGallery()}
-                    </div>
-                  </div>
-                  <p><b>Pricing:</b></p>
-                  <p><i>We know every wedding is unique, with unique needs. Please contact us at <a href="mailto:brian@23twenty.com">brian@23twenty.com</a></i> to discuss your special day</p>
-                  <p><b>
-                    Individual (Photography or Video) wedding packages start at $2,000 - includes 2 shooters, 6 hours of coverage, and all high resolution digital images.
-                  </b></p>
-                  <p><b>
-                    Photography & Video packages start at $3,000.
-                  </b></p>
-                  <p><b>Fully designed wedding albums and fine art wall prints are also available as package add ons.</b></p>
-                </div>
-              </div>
-            </div>
+            <p className="header-text">Great News, we've rebranded! Please check out:</p>
+            <a href="https://www.briankphoto.com">
+              <WeddingLogo/>
+            </a>
+            <a href="https://www.briankphoto.com">www.briankphoto.com</a>
           </div>
         </Layout>
     )

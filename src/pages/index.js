@@ -35,9 +35,8 @@ class Index extends React.Component {
             <h2 className="intro-heading">We capture your <span className="rotating">Moment, Brand, Beauty, Energy, Message, Love, Passion</span></h2>
             <p>
               <span className="title">Hey! </span>
-              We are 23Twenty Media, a photography & cinematography studio specializing in weddings, portraits, & brands. We are based out of Philadelphia, PA but can travel world-wide
-              to create something great! Although 23Twenty Media is a company, it is the sole brain child and passion of Brian Kilpatrick
-              (I will personally be there every step of the way!). Take a look around and lets talk soon!
+              We are 23Twenty Media, a photography & cinematography studio. We are based out of Philadelphia, PA but can travel world-wide
+              to create something great! Take a look around and lets talk soon!
             </p>
           </div>
           <div className="container grey-wrapper portfolio">
@@ -48,26 +47,26 @@ class Index extends React.Component {
             </div>
             <div className="row portfolio-links">
               <div className="col-md-4">
-                <MainLink image={weddingImg} linkTo="/weddings" caption="Weddings"/>
-              </div>
-              <div className="col-md-4">
                 <MainLink image={photoImg} linkTo="/photo" caption="Photography"/>
               </div>
               <div className="col-md-4">
                 <MainLink image={videoImg} linkTo="/video" caption="Videography"/>
               </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-6">
-                <span className="header-text">Featured Blog Posts</span>
-                <MainLink image={blogImg}
-                          linkTo="/engagements/philadelphia-engagement-photo-shoot-magic-gardens" caption="Rome + Zion"/>
-                <p>Philadelphia Magic Gardens Engagement Session - April 11th, 2019</p>
+              <div className="col-md-4">
+                <MainLink image={weddingImg} linkTo="/weddings" caption="Weddings"/>
               </div>
             </div>
           </div>
+          {/*<div className="container">*/}
+            {/*<div className="row">*/}
+              {/*<div className="col-sm-6">*/}
+                {/*<span className="header-text">Featured Blog Posts</span>*/}
+                {/*<MainLink image={blogImg}*/}
+                          {/*linkTo="/engagements/philadelphia-engagement-photo-shoot-magic-gardens" caption="Rome + Zion"/>*/}
+                {/*<p>Philadelphia Magic Gardens Engagement Session - April 11th, 2019</p>*/}
+              {/*</div>*/}
+            {/*</div>*/}
+          {/*</div>*/}
           <InstagramFeed />
         </Layout>
     )

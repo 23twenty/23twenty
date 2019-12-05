@@ -46,6 +46,9 @@ const Meta = ({ site, title, image }) => {
         },
         {
             name: "twitter:card", content: "summary"
+        },
+        {
+            name: "google-site-verification", content: "lY6PP94Zx3ja-gDJSTdgGlWPTkfs7tUhIt2jBvdXoOA"
         }
       ]}
     />

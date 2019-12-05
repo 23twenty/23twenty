@@ -1,5 +1,14 @@
 .wedding-wrapper {
   margin-top: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  .wedding-logo {
+    height: 400px;
+    margin-bottom: 50px;
+  }
 
   .bridal-img {
     width: 800px;

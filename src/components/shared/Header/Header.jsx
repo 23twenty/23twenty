@@ -79,12 +79,12 @@ class Header extends React.Component {
       <Navbar expand={false}
               className={`${isHome ? 'home transparent absolute' : ''} text-uppercase inverse-text solid`}>
         <div className="container">
-          <MenuLink to="/weddings" text="Weddings" />
           <MenuLink to="/photo" text="Photo" />
+          <MenuLink to="/video" text="Video" />
           <Link to="/">
             {isHome || isFixed ? <LogoWhite/> : <LogoBlack/>}
           </Link>
-          <MenuLink to="/video" text="Video" />
+          <MenuLink to="/weddings" text="Weddings" />
           <MenuLink to="/about" text="About" />
           <HamburgerMenu isOpen={isOpen} toggle={this._toggle}/>
         </div>

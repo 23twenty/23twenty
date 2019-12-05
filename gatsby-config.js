@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: '23Twenty Media | Philadelphia Wedding Photography | Philadelphia Wedding Cinematography',
-    description: 'Virbrant & Modern Wedding Photography & Cinematography servicing Philadelphia, New Jersey, Delaware, NYC & Nationwide.',
+    title: '23Twenty Media | Philadelphia Photography & Videography',
+    description: 'Virbrant & Modern Photography & Cinematography servicing Philadelphia, New Jersey, Delaware, NYC & Nationwide.',
     siteUrl: 'https://www.23twenty.com',
   },
   pathPrefix: '/',

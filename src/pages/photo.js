@@ -54,7 +54,7 @@ class Photo extends React.Component {
             <div className="intro noLink">
               <div className="intro-title header-text">What we love to shoot</div>
               <div className="cbp-filter-item">Portraits</div>
-              <div className="cbp-filter-item">Weddings/Engagement</div>
+              {/*<div className="cbp-filter-item">Weddings/Engagement</div>*/}
               <div className="cbp-filter-item">Events/Concerts</div>
               <div className="cbp-filter-item">Business/Branding</div>
               <div className="cbp-filter-item">Product</div>

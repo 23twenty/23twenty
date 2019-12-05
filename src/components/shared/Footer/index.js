@@ -20,10 +20,8 @@ const Footer = () => (
       <div className="container inner text-center">
         <img src={Logo} className="footer-logo" />
         <div className="space25" />
-        <h1 className="keyword">Philadelphia Wedding Photographer</h1>
-        <h1 className="keyword">Philadelphia Wedding Cinematography</h1>
         <p className="contact-heading">Get In Touch</p>
-        <a className="contact-link" href="tel:267-223-7837">(267) 223-7837</a>
+        <a className="contact-link" href="tel:267-223-7837">(267) 223-7869</a>
         <br/>
         <a className="contact-link" href="mailto:brian@23Twenty.com">brian@23Twenty.com</a>
         <ul className="social social-bg social-s">
