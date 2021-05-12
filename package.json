@@ -46,7 +46,7 @@
     "react-slick": "^0.23.2",
     "reactstrap": "^6.5.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^4.4.2"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.8",
