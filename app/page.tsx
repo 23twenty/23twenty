@@ -32,8 +32,8 @@ function Home() {
       <div id="content" className="site-content">
         {/* Portfolio items */}
         <ul className="grid" id="portfolio">
-          <PhotoLink title="Photo" src={photoImg} />
-          <PhotoLink title="Video" src={videoImg} />
+          <PhotoLink title="Photo" src={photoImg} href="/photo" />
+          <PhotoLink title="Video" src={videoImg} href="/video" />
           {/* Quote Item */}
           {/* <motion.li
             initial={{ opacity: 0, transform: `translateY(50px)` }}

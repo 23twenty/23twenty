@@ -8,11 +8,13 @@ interface PhotoLinkProps {
   src: StaticImageData;
   title: string;
   subTitle?: string;
+  href: string;
 }
 
 export const PhotoLink: React.FC<PhotoLinkProps> = ({
   src,
   title,
+  href,
   subTitle,
 }) => {
   return (
@@ -23,21 +25,21 @@ export const PhotoLink: React.FC<PhotoLinkProps> = ({
       className="grid-item element-item"
     >
       <div className="item-wrapper">
-        <Link href="/single-portfolio">
+        <Link href={href}>
           <Image src={src} alt={title} />
         </Link>
         <div className="portfolio-text-holder">
           <div className="portfolio-info">
-            <Link className="portfolio-text" href="/single-portfolio">
+            <Link className="portfolio-text" href={href}>
               {title}
             </Link>
             {subTitle && (
               <p className="portfolio-category">
-                <Link href="">{subTitle}</Link>
+                <Link href={href}>{subTitle}</Link>
               </p>
             )}
             <p className="portfolio-arrow">
-              <Link href="/single-portfolio">
+              <Link href={href}>
                 <img src={arrow.src} alt="" />
               </Link>
             </p>
