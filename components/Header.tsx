@@ -73,13 +73,13 @@ const Header = () => {
               exit={{ transform: `translateY(30px)` }}
               className="menu-holder"
             >
-              <div className="menu-left-part">
+              {/* <div className="menu-left-part">
                 <div className="menu-left-text">
                   Welcome to our online art journey. You can read our{" "}
                   <Link href="/blog">thoughts</Link> or you can simply{" "}
                   <Link href="/contact">write to us</Link>
                 </div>
-              </div>
+              </div> */}
               <div className="menu-right-part">
                 <nav id="header-main-menu" className="big-menu">
                   {/* Nav Links */}
@@ -94,58 +94,30 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        href="/about"
+                        href="/photo"
                         className={pathname === "/about" ? "current" : ""}
                       >
-                        About
+                        Photo
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/blog"
+                        href="/video"
                         className={pathname === "/blog" ? "current" : ""}
                       >
-                        Blog
+                        Video
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/gallery"
+                        href="/weddings"
                         className={pathname === "/gallery" ? "current" : ""}
                       >
-                        Gallery
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/contact"
-                        className={pathname === "/contact" ? "current" : ""}
-                      >
-                        Contact
+                        Weddings
                       </Link>
                     </li>
                   </ul>
-                  <form role="search" className="search-form">
-                    <label>
-                      <input
-                        type="search"
-                        className="search-field"
-                        placeholder="Search"
-                        name="search"
-                        title="Search for:"
-                      />
-                    </label>
-                  </form>
                 </nav>
-                <div className="menu-portfolio-category">
-                  <p className="portfolio-category">
-                    <Link href="">Architecture</Link>
-                    <Link href="">Branding</Link>
-                    <Link href="">Fashion</Link>
-                    <Link href="">Interior</Link>
-                    <Link href="">Jewelry</Link>
-                  </p>
-                </div>
               </div>
               <div className="clear"></div>
             </motion.div>

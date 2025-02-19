@@ -33,15 +33,10 @@ import type { Metadata } from "next";
 
 // Metadata of the website (used to inprove SEO of the website)
 export const metadata: Metadata = {
-  title: "Opta - Minimal Portfolio and Photography Nextjs Template",
-  description: "Template by CocoBasic",
-  keywords: ["HTML", "CSS", "Javascript", "Typescript", "React", "nextjs"],
-  authors: [
-    {
-      name: "Cocobasic",
-      url: "https://www.cocobasic.com/",
-    },
-  ],
+  title: "23Twenty Media - Philadelphia Photography & Video Production",
+  description:
+    "A photography & video production company passionate about creativity and excellence. Based in Philadelphia, PA.",
+  keywords: ["photography", "video production", "Philadelphia", "PA"],
 };
 
 export default function RootLayout({

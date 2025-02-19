@@ -1045,7 +1045,7 @@ body a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.3s ease-out;
 }
 
@@ -1474,8 +1474,7 @@ footer ul {
 .footer-logo {
   padding-bottom: 130px;
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 200px;
   margin: 0 auto;
   padding-top: 90px;
 }
