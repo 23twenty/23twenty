@@ -1,26 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-
-// Images
-import img01 from "@/assets/images/gallery/about_img.jpg";
-import img02 from "@/assets/images/gallery/img_06_large.jpg";
-import img03 from "@/assets/images/gallery/img_01_large.jpg";
-import { PhotoLink } from "@/components/PhotoLink";
-
-// ------------------
+import { useEffect, useState } from "react";
+import LightGallery from 'lightgallery/react';
 
 const Headshots = () => {
+  const [photos, setPhotos] = useState([]);
+
+  useEffect(() => {
+    const fetchPhotos = async () => {
+      const response = await fetch('/api/gallery-images?folderPath=/images/example');
+      const data = await response.json();
+      setPhotos(data);
+    };
+
+    fetchPhotos();
+  }, []);
+
   return (
-    <main className="single single-gallery">
-      <div id="content" className="site-content">
-        <div className="gallery">
-          {/* Title */}
-          <h1 className="entry-title center-relative center-text">Headshots</h1>
+      <main className="single single-gallery">
+        <div id="content" className="site-content">
+          <div className="gallery">
+            <h1 className="entry-title center-relative center-text">Headshots</h1>
+            <LightGallery
+                dynamic={true}
+                dynamicEl={photos}
+            />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
   );
 };
 
