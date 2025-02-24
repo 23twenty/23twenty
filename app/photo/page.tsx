@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 // Images
-import img01 from "@/assets/images/gallery/about_img.jpg";
-import img02 from "@/assets/images/gallery/img_06_large.jpg";
-import img03 from "@/assets/images/gallery/img_01_large.jpg";
+import headshotThumb from "@/assets/images/headshotThumb.jpg";
+import eventsThumb from "@/assets/images/eventsThumb.jpg";
+import musicThumb from "@/assets/images/musicThumb.jpg";
+import productThumb from "@/assets/images/productThumb.jpg";
 import { PhotoLink } from "@/components/PhotoLink";
 
 // ------------------
@@ -21,10 +22,14 @@ const Photo = () => {
             Photography
           </h1>
         </div>
-        <PhotoLink src={img02} title="Headshots" href="./headshots" />
-        <PhotoLink src={img02} title="Corporate" href="./corporate" />
-        <PhotoLink src={img02} title="Events" href="./events" />
-        <PhotoLink src={img02} title="Headshots" href="./headshots" />
+        <ul className="grid">
+          <PhotoLink src={headshotThumb} title="Headshots" href="./headshots" />
+          <PhotoLink src={eventsThumb} title="Events" href="./events" />
+          <PhotoLink src={musicThumb} title="Music" href="./music" />
+          <PhotoLink src={productThumb} title="Product" href="./product" />
+        </ul>
+
+
       </div>
     </main>
   );

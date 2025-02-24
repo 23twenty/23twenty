@@ -1014,7 +1014,7 @@ body a:hover {
   font-size: 0;
   line-height: 0;
   margin: 3%;
-  max-width: 43%;
+  max-width: 25%;
 }
 
 .grid-item.hidden {
@@ -2039,4 +2039,24 @@ li.social-footer a:first-child {
 
 .video-framer iframe {
   aspect-ratio: 16 / 9;
+}
+
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.video-grid iframe {
+  width: initial;
+
+}
+
+@media screen and (min-width: 600px){
+  .video-grid iframe {
+    min-width: 500px;
+    min-height: 282px;
+  }
+
 }

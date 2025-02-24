@@ -110,8 +110,8 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        href="/weddings"
-                        className={pathname === "/gallery" ? "current" : ""}
+                        href="https://www.briankphoto.com"
+                        target={"_blank"}
                       >
                         Weddings
                       </Link>
