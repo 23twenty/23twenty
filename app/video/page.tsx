@@ -1,12 +1,5 @@
 "use client";
 
-import Plyr from "plyr-react"
-import "plyr-react/plyr.css"
-import Vimeo from '@u-wave/react-vimeo';
-import ReactPlayer from "react-player";
-
-// ------------------
-
 const SingleGallery = () => {
   return (
     <main className="single single-gallery">
