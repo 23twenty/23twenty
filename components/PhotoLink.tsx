@@ -22,9 +22,9 @@ export const PhotoLink: React.FC<PhotoLinkProps> = ({
       initial={{ opacity: 0, transform: `translateY(50px)` }}
       whileInView={{ opacity: 1, transform: `translateY(0px)` }}
       viewport={{ once: true }}
-      className="grid-item element-item"
+      className="grid-item"
     >
-      <div className="item-wrapper">
+      <div className="item-wrapper page-menu-item">
         <Link href={href}>
           <Image src={src} alt={title} />
         </Link>

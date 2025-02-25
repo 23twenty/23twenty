@@ -1027,8 +1027,7 @@ body a:hover {
 
 .grid-item img {
   display: block;
-  width: auto;
-  height: auto;
+object-fit: contain;
   max-height: 100%;
   max-width: 100%;
 }
@@ -2051,6 +2050,11 @@ li.social-footer a:first-child {
 .video-grid iframe {
   width: initial;
 
+}
+
+.page-menu-item {
+  max-width: 290px;
+  height: 386px;
 }
 
 @media screen and (min-width: 600px){
