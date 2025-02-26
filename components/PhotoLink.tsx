@@ -18,13 +18,13 @@ export const PhotoLink: React.FC<PhotoLinkProps> = ({
   subTitle,
 }) => {
   return (
-    <motion.li
-      initial={{ opacity: 0, transform: `translateY(50px)` }}
-      whileInView={{ opacity: 1, transform: `translateY(0px)` }}
-      viewport={{ once: true }}
-      className="grid-item"
-    >
-      <Link href={href}>
+    <Link href={href}>
+      <motion.li
+        initial={{ opacity: 0, transform: `translateY(50px)` }}
+        whileInView={{ opacity: 1, transform: `translateY(0px)` }}
+        viewport={{ once: true }}
+        className="grid-item"
+      >
         <div className="item-wrapper page-menu-item">
           <Image src={src} alt={title} />
           <div className="portfolio-text-holder">
@@ -35,7 +35,7 @@ export const PhotoLink: React.FC<PhotoLinkProps> = ({
             </div>
           </div>
         </div>
-      </Link>
-    </motion.li>
+      </motion.li>
+    </Link>
   );
 };
