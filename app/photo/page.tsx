@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
-
+"use client";
 // Images
 import headshotThumb from "@/assets/images/headshotThumb.jpg";
 import eventsThumb from "@/assets/images/eventsThumb.jpg";
@@ -21,10 +19,14 @@ const Photo = () => {
           </h1>
         </div>
         <ul className="grid">
-          <PhotoLink src={headshotThumb} title="Headshots" href="./headshots" />
-          <PhotoLink src={eventsThumb} title="Events" href="./events" />
-          <PhotoLink src={musicThumb} title="Music" href="./music" />
-          <PhotoLink src={productThumb} title="Product" href="./product" />
+          <PhotoLink
+            src={headshotThumb}
+            title="Headshots"
+            href="/photo/headshots"
+          />
+          <PhotoLink src={eventsThumb} title="Events" href="/photo/events" />
+          <PhotoLink src={musicThumb} title="Music" href="/photo/music" />
+          <PhotoLink src={productThumb} title="Product" href="/photo/product" />
         </ul>
       </div>
     </main>
