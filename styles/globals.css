@@ -1027,7 +1027,7 @@ body a:hover {
 
 .grid-item img {
   display: block;
-object-fit: contain;
+  object-fit: cover;
   max-height: 100%;
   max-width: 100%;
 }

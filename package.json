@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --nojekyll"
+    "deploy": "gh-pages -d out --nojekyll --cname www.23twenty.com"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.5",
