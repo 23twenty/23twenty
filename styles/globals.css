@@ -444,7 +444,9 @@ body a:hover {
 .slick-dots li button:before {
   background-color: #d5d5d5;
   opacity: 1;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .slick-dots li:hover button:before {
@@ -1058,8 +1060,14 @@ body a:hover {
   line-height: 100%;
 }
 
-.portfolio-text-holder .portfolio-text:hover + p + .portfolio-arrow a img {
-  transform: translate(10px);
+.link-text {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.2s linear;
+}
+
+.link-text:hover {
+  color: #d7b065;
 }
 
 .portfolio-text-holder .portfolio-category {
@@ -1085,7 +1093,7 @@ body a:hover {
   opacity: 1;
 }
 
-.grid-item .portfolio-arrow img {
+.portfolio-arrow {
   margin-left: auto;
   margin-right: auto;
   width: 35px;
@@ -1094,7 +1102,7 @@ body a:hover {
   transition: transform 0.3s ease;
 }
 
-.grid-item .portfolio-arrow img:hover {
+.portfolio-arrow:hover {
   transform: translate(10px);
 }
 
@@ -1257,7 +1265,9 @@ body a:hover {
   line-height: 45px;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
-  transition: opacity 0.4s ease, color 0.2s linear;
+  transition:
+    opacity 0.4s ease,
+    color 0.2s linear;
   display: block;
   pointer-events: none;
   cursor: default;
@@ -2040,7 +2050,6 @@ li.social-footer a:first-child {
   aspect-ratio: 16 / 9;
 }
 
-
 .video-grid {
   display: flex;
   flex-wrap: wrap;
@@ -2049,7 +2058,6 @@ li.social-footer a:first-child {
 }
 .video-grid iframe {
   width: initial;
-
 }
 
 .page-menu-item {
@@ -2057,10 +2065,9 @@ li.social-footer a:first-child {
   height: 386px;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   .video-grid iframe {
     min-width: 500px;
     min-height: 282px;
   }
-
 }

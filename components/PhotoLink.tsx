@@ -29,19 +29,9 @@ export const PhotoLink: React.FC<PhotoLinkProps> = ({
           <Image src={src} alt={title} />
           <div className="portfolio-text-holder">
             <div className="portfolio-info">
-              <Link className="portfolio-text" href={href}>
-                {title}
-              </Link>
-              {subTitle && (
-                <p className="portfolio-category">
-                  <Link href={href}>{subTitle}</Link>
-                </p>
-              )}
-              <p className="portfolio-arrow">
-                <Link href={href}>
-                  <img src={arrow.src} alt="" />
-                </Link>
-              </p>
+              <span className="portfolio-text link-text">{title}</span>
+              {subTitle && <p className="portfolio-category">{subTitle}</p>}
+              <img className="portfolio-arrow" src={arrow.src} alt="" />
             </div>
           </div>
         </div>
