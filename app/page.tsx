@@ -1,23 +1,12 @@
-"use client";
-import { useState } from "react";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 // Images
-import arrow from "@/assets/images/opta_arrow@2x.png";
 import videoImg from "@/assets/images/home/video-thumb.jpg";
 import photoImg from "@/assets/images/home/photo-thumb.jpg";
 
 import { PhotoLink } from "@/components/PhotoLink";
 
 function Home() {
-  const [loadedAll, setLoadedAll] = useState(false);
-
-  const handleLoadAll = () => {
-    setLoadedAll(true);
-  };
-
   return (
     <main className="page">
       {/* Page intro text */}

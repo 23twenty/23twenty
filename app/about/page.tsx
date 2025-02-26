@@ -1,12 +1,4 @@
-"use client";
-
 // Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectFade, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
 
 // Images
 import aboutImg from "@/assets/images/about/about_img.jpg";
@@ -17,8 +9,7 @@ function About() {
   return (
     <main className="page">
       <div id="content" className="site-content">
-        <div className="content-945 center-relative">
-        </div>
+        <div className="content-945 center-relative"></div>
       </div>
     </main>
   );

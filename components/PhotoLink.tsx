@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import arrow from "@/assets/images/opta_arrow@2x.png";
 import Image, { StaticImageData } from "next/image";
-import videoImg from "@/assets/images/home/video-thumb.jpg";
 
 interface PhotoLinkProps {
   src: StaticImageData;

@@ -1,14 +1,10 @@
-"use client";
-
-const SingleGallery = () => {
+const Video = () => {
   return (
     <main className="single single-gallery">
       <div id="content" className="site-content">
         <div className="gallery">
           {/* Title */}
-          <h1 className="entry-title center-relative center-text">
-            Video
-          </h1>
+          <h1 className="entry-title center-relative center-text">Video</h1>
           <div className="center-relative clear">
             <div className="entry-content">
               {/* Description text */}
@@ -25,30 +21,35 @@ const SingleGallery = () => {
                 {/* Gallery items images */}
                 <div className="video-grid">
                   <iframe
-                      src="https://player.vimeo.com/video/640905967?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                      title="Good Idea Bad Idea - 4K"></iframe>
+                    src="https://player.vimeo.com/video/640905967?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="Good Idea Bad Idea - 4K"
+                  ></iframe>
                   <iframe
-                      src="https://player.vimeo.com/video/606086234?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                      title="Inclub Magazine X Rodney McLeod - Defining Moments"></iframe>
+                    src="https://player.vimeo.com/video/606086234?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="Inclub Magazine X Rodney McLeod - Defining Moments"
+                  ></iframe>
                   <iframe
-                      src="https://player.vimeo.com/video/747716082?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                      title="Resurgence Church"></iframe>
+                    src="https://player.vimeo.com/video/747716082?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="Resurgence Church"
+                  ></iframe>
                   <iframe
-                      src="https://player.vimeo.com/video/656439697?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                      title="The Plumes - FINAL"></iframe>
+                    src="https://player.vimeo.com/video/656439697?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="The Plumes - FINAL"
+                  ></iframe>
                   <iframe
-                      src="https://player.vimeo.com/video/549772463?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                      title="Firestarter Sizzle"></iframe>
+                    src="https://player.vimeo.com/video/549772463?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="Firestarter Sizzle"
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -60,4 +61,4 @@ const SingleGallery = () => {
   );
 };
 
-export default SingleGallery;
+export default Video;

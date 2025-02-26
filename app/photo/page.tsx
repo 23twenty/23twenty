@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -28,8 +26,6 @@ const Photo = () => {
           <PhotoLink src={musicThumb} title="Music" href="./music" />
           <PhotoLink src={productThumb} title="Product" href="./product" />
         </ul>
-
-
       </div>
     </main>
   );
