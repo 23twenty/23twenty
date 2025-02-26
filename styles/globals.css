@@ -1093,6 +1093,10 @@ body a:hover {
   opacity: 1;
 }
 
+.grid-item:hover .portfolio-arrow {
+  transform: translate(10px);
+}
+
 .portfolio-arrow {
   margin-left: auto;
   margin-right: auto;
@@ -1100,10 +1104,6 @@ body a:hover {
   height: 20px;
   margin-top: 30px;
   transition: transform 0.3s ease;
-}
-
-.portfolio-arrow:hover {
-  transform: translate(10px);
 }
 
 .more-posts-portfolio {
