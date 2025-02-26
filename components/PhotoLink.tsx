@@ -24,28 +24,28 @@ export const PhotoLink: React.FC<PhotoLinkProps> = ({
       viewport={{ once: true }}
       className="grid-item"
     >
-      <div className="item-wrapper page-menu-item">
-        <Link href={href}>
+      <Link href={href}>
+        <div className="item-wrapper page-menu-item">
           <Image src={src} alt={title} />
-        </Link>
-        <div className="portfolio-text-holder">
-          <div className="portfolio-info">
-            <Link className="portfolio-text" href={href}>
-              {title}
-            </Link>
-            {subTitle && (
-              <p className="portfolio-category">
-                <Link href={href}>{subTitle}</Link>
-              </p>
-            )}
-            <p className="portfolio-arrow">
-              <Link href={href}>
-                <img src={arrow.src} alt="" />
+          <div className="portfolio-text-holder">
+            <div className="portfolio-info">
+              <Link className="portfolio-text" href={href}>
+                {title}
               </Link>
-            </p>
+              {subTitle && (
+                <p className="portfolio-category">
+                  <Link href={href}>{subTitle}</Link>
+                </p>
+              )}
+              <p className="portfolio-arrow">
+                <Link href={href}>
+                  <img src={arrow.src} alt="" />
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </motion.li>
   );
 };
