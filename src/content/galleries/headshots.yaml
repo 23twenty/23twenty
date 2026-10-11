@@ -1,6 +1,13 @@
 title: Headshots
 order: 1
 thumbnail: /src/assets/gallery/headshot-thumb.jpg
+intro: >-
+  Headshots for professionals, creatives and teams in Philadelphia and beyond.
+  Portraits that look like you on a good day, ready for LinkedIn, your website
+  or a press kit.
+description: >-
+  Headshot photography in Philadelphia for professionals, creatives and teams,
+  by 23Twenty Media.
 photos:
   - image: "/src/assets/gallery/headshots/Philadelphia Headshot Photography- (01 of 017).jpg"
     alt: "Philadelphia Headshot Photography (01 of 017)"

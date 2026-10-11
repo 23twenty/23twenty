@@ -22,6 +22,7 @@ export default config({
       path: 'src/content/settings',
       schema: {
         email: fields.text({ label: 'Email' }),
+        phone: fields.text({ label: 'Phone number', description: 'Shown as typed, e.g. (267) 277-3498' }),
         facebook: fields.url({ label: 'Facebook page' }),
         instagram: fields.url({ label: 'Instagram profile' }),
         weddings: fields.url({ label: 'Weddings link (menu)' }),
@@ -45,6 +46,7 @@ export default config({
       label: 'Video page',
       path: 'src/content/videos',
       schema: {
+        description: fields.text({ label: 'Description (search results and link previews)', multiline: true }),
         videos: fields.array(
           fields.object({
             vimeoId: fields.text({ label: 'Vimeo video ID', description: 'The number at the end of the Vimeo link' }),
@@ -65,6 +67,12 @@ export default config({
         title: fields.slug({ name: { label: 'Title' }, slug: { label: 'Page address', description: '/photo/<this>' } }),
         order: fields.integer({ label: 'Order on the Photography page', defaultValue: 1 }),
         thumbnail: image('Tile photo', 'gallery'),
+        intro: fields.text({ label: 'Intro', description: 'A few sentences under the title. Search engines read this.', multiline: true }),
+        description: fields.text({
+          label: 'Description (search results and link previews)',
+          description: 'One or two sentences. Left blank, the intro is used.',
+          multiline: true,
+        }),
         photos: fields.array(
           fields.object({
             image: image('Photo', 'gallery'),

@@ -5,9 +5,24 @@ import TileGrid from '../components/TileGrid.astro';
 import { asset, read } from '../lib/content';
 
 const home = await read('home');
+const settings = await read('settings');
+
+// Tells search engines who the business is and where it works.
+const business = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: '23Twenty Media',
+  description: settings.siteDescription,
+  url: Astro.site?.href,
+  email: settings.email,
+  telephone: settings.phone,
+  areaServed: 'Philadelphia, PA',
+  address: { '@type': 'PostalAddress', addressLocality: 'Philadelphia', addressRegion: 'PA', addressCountry: 'US' },
+  sameAs: [settings.facebook, settings.instagram],
+};
 ---
 
-<Layout section="home">
+<Layout section="home" structuredData={business}>
   <main>
     <div class="intro measure">
       <h1>

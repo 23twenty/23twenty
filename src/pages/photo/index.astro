@@ -8,7 +8,11 @@ import { galleries } from '../../lib/galleries';
 const all = await galleries();
 ---
 
-<Layout title="Photography" section="photo">
+<Layout
+  title="Photography"
+  description={`Photography by 23Twenty Media in Philadelphia: ${all.map((g) => g.entry.title.toLowerCase()).join(', ')}.`}
+  section="photo"
+>
   <main>
     <h1 class="page-title">Photography</h1>
     <TileGrid>

@@ -8,17 +8,33 @@ import '@fontsource/roboto/700.css';
 import '../styles/site.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { read } from '../lib/content';
+import type { ImageMetadata } from 'astro';
+import { getImage } from 'astro:assets';
+import { asset, read } from '../lib/content';
+import { galleries } from '../lib/galleries';
 
 interface Props {
   title?: string;
+  /** For search results and link previews. Defaults to the site description. */
+  description?: string;
+  /** The picture a shared link shows. Defaults to the first gallery's tile photo (the home tiles are small portraits). */
+  image?: ImageMetadata;
+  /** schema.org data for search engines (the home page describes the business). */
+  structuredData?: object;
   /** Which menu item to mark as current. */
   section?: 'home' | 'photo' | 'video';
 }
 
-const { title, section } = Astro.props;
+const { title, section, structuredData } = Astro.props;
 const settings = await read('settings');
 const fullTitle = title ? `${title} | ${settings.siteTitle}` : settings.siteTitle;
+const description = Astro.props.description || settings.siteDescription;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const previewSrc = Astro.props.image ?? asset((await galleries())[0].entry.thumbnail);
+const preview = await getImage({ src: previewSrc, width: Math.min(1200, previewSrc.width), format: 'jpg' });
+const previewWidth = Math.min(1200, previewSrc.width);
+const previewHeight = Math.round((previewSrc.height / previewSrc.width) * previewWidth);
+const previewUrl = new URL(preview.src, Astro.site);
 ---
 
 <!doctype html>
@@ -27,9 +43,19 @@ const fullTitle = title ? `${title} | ${settings.siteTitle}` : settings.siteTitl
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
-    <meta name="description" content={settings.siteDescription} />
-    <meta name="keywords" content="photography,video production,Philadelphia,PA" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="23Twenty Media" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={previewUrl} />
+    <meta property="og:image:width" content={String(previewWidth)} />
+    <meta property="og:image:height" content={String(previewHeight)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <script is:inline>
       document.documentElement.classList.add('js');

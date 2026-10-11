@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Gallery from '../../components/Gallery.astro';
+import { asset } from '../../lib/content';
 import { galleries } from '../../lib/galleries';
 
 export async function getStaticPaths() {
@@ -11,9 +12,29 @@ export async function getStaticPaths() {
 const { gallery } = Astro.props;
 ---
 
-<Layout title={gallery.title} section="photo">
+<Layout
+  title={gallery.title}
+  description={gallery.description || gallery.intro}
+  image={asset(gallery.thumbnail)}
+  section="photo"
+>
   <main>
     <h1 class="page-title">{gallery.title}</h1>
+    {gallery.intro && <p class="intro">{gallery.intro}</p>}
     <Gallery photos={gallery.photos} />
   </main>
 </Layout>
+
+<style>
+  /* Sits between the title and the photos; also what search engines read about the gallery. */
+  .intro {
+    width: min(650px, 90%);
+    margin: -10px auto 50px;
+    text-align: center;
+  }
+  @media (max-width: 1020px) {
+    .intro {
+      margin: 20px auto 30px;
+    }
+  }
+</style>

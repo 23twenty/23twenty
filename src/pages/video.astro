@@ -2,10 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import { read } from '../lib/content';
 
-const { videos } = await read('videos');
+const { videos, description } = await read('videos');
 ---
 
-<Layout title="Video" section="video">
+<Layout title="Video" description={description} section="video">
   <main>
     <h1 class="page-title">Video</h1>
     <div class="video-grid measure">

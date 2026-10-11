@@ -1,6 +1,12 @@
 title: Music
 order: 3
 thumbnail: /src/assets/gallery/music-thumb.jpg
+intro: >-
+  Photography for musicians and bands: press photos, album artwork and live
+  shows in Philadelphia and beyond.
+description: >-
+  Music photography in Philadelphia: press photos, album artwork and live
+  performance, by 23Twenty Media.
 photos:
   - image: "/src/assets/gallery/music/Philadelphia Music Photography- (01 of 001).jpg"
     alt: "Philadelphia Music Photography (01 of 001)"
