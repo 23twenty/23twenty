@@ -1,0 +1,137 @@
+---
+import { getImage } from 'astro:assets';
+import { asset } from '../lib/content';
+
+interface Photo {
+  image: string | null;
+  alt: string;
+}
+interface Props {
+  photos: readonly Photo[];
+}
+
+const { photos } = Astro.props;
+const items = await Promise.all(
+  photos.map(async (p) => {
+    const src = asset(p.image);
+    const img = await getImage({ src, widths: [400, 800, 1200], format: 'webp' });
+    return { img, alt: p.alt, ratio: src.width / src.height };
+  }),
+);
+---
+
+<!--
+  Justified rows, laid out like react-photo-album (which the old site used): rows are chosen
+  together so each lands as close as possible to the target height, then scaled to fill the
+  width exactly. Without JavaScript the flex-wrap fallback below still shows every photo.
+-->
+<div class="rows" data-gallery>
+  {
+    items.map((p) => (
+      <img
+        src={p.img.src}
+        srcset={p.img.srcSet.attribute}
+        sizes="(max-width: 750px) 50vw, 33vw"
+        alt={p.alt}
+        loading="lazy"
+        decoding="async"
+        data-ratio={p.ratio}
+        style={`--ratio:${p.ratio}`}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .rows {
+    --row: 288px;
+    --gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+  .rows::after {
+    content: '';
+    flex-grow: 999;
+  }
+  img {
+    flex-grow: var(--ratio);
+    flex-basis: calc(var(--ratio) * var(--row));
+    width: 0;
+    height: auto;
+    aspect-ratio: var(--ratio);
+    object-fit: cover;
+  }
+  @media (max-width: 599px) {
+    .rows {
+      --row: 130px;
+      --gap: 10px;
+    }
+  }
+
+  /* Once the script has chosen the rows, each one is its own flex line. */
+  .rows.is-laid-out {
+    display: block;
+  }
+  .rows.is-laid-out::after {
+    content: none;
+  }
+  .rows :global(.row) {
+    display: flex;
+    gap: var(--gap);
+    margin-bottom: var(--gap);
+  }
+  .rows :global(.row:last-child) {
+    margin-bottom: 0;
+  }
+  .rows.is-laid-out img {
+    flex: none;
+  }
+</style>
+
+<script>
+  import { layoutRows } from '../lib/justify';
+
+  // react-photo-album's responsive defaults: breakpoints 1200/600/300/0.
+  const spacingFor = (w: number) => (w >= 1200 ? 20 : w >= 600 ? 15 : w >= 300 ? 10 : 5);
+  const targetFor = (w: number) => Math.round(w >= 1200 ? w / 5 : w >= 600 ? w / 4 : w >= 300 ? w / 3 : w / 2);
+
+  function render(root: HTMLElement) {
+    const imgs = [...root.querySelectorAll<HTMLImageElement>('img[data-ratio]')];
+    const width = root.clientWidth;
+    if (!width || imgs.length === 0) return;
+    const spacing = spacingFor(width);
+    const rows = layoutRows(
+      imgs.map((i) => Number(i.dataset.ratio)),
+      width,
+      spacing,
+      targetFor(width),
+    );
+    root.style.setProperty('--gap', `${spacing}px`);
+    const frag = document.createDocumentFragment();
+    let n = 0;
+    for (const row of rows) {
+      const line = document.createElement('div');
+      line.className = 'row';
+      for (let k = 0; k < row.count; k++) {
+        const img = imgs[n++];
+        const ratio = Number(img.dataset.ratio);
+        img.style.width = `${row.height * ratio}px`;
+        img.style.height = `${row.height}px`;
+        line.append(img);
+      }
+      frag.append(line);
+    }
+    root.replaceChildren(frag);
+    root.classList.add('is-laid-out');
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((root) => {
+    let last = 0;
+    new ResizeObserver(() => {
+      if (root.clientWidth === last) return;
+      last = root.clientWidth;
+      render(root);
+    }).observe(root);
+  });
+</script>

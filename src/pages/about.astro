@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { markdoc, read } from '../lib/content';
+
+const about = await read('about');
+const body = markdoc(about.body);
+---
+
+<Layout title="About">
+  <main class="measure about">
+    {about.heading && <h1 class="page-title">{about.heading}</h1>}
+    {body && <div class="body" set:html={body} />}
+  </main>
+</Layout>
+
+<style>
+  .about {
+    max-width: 750px;
+  }
+  .body :global(p) {
+    margin-bottom: 1em;
+  }
+</style>

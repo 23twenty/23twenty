@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { read } from '../lib/content';
+
+const { videos } = await read('videos');
+---
+
+<Layout title="Video" section="video">
+  <main>
+    <h1 class="page-title">Video</h1>
+    <div class="video-grid measure">
+      {
+        videos.map((v) => (
+          <iframe
+            src={`https://player.vimeo.com/video/${v.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            title={v.title}
+            loading="lazy"
+          />
+        ))
+      }
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 50px;
+  }
+  iframe {
+    width: 500px;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+</style>

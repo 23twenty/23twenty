@@ -1,0 +1,56 @@
+---
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/playfair-display/400.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/700.css';
+import '../styles/site.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { read } from '../lib/content';
+
+interface Props {
+  title?: string;
+  /** Which menu item to mark as current. */
+  section?: 'home' | 'photo' | 'video';
+}
+
+const { title, section } = Astro.props;
+const settings = await read('settings');
+const fullTitle = title ? `${title} | ${settings.siteTitle}` : settings.siteTitle;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={settings.siteDescription} />
+    <meta name="keywords" content="photography,video production,Philadelphia,PA" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+  </head>
+  <body>
+    <Header section={section} weddings={settings.weddings} />
+    <slot />
+    <Footer settings={settings} />
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (!e.isIntersecting) continue;
+            e.target.classList.add('is-revealed');
+            io.unobserve(e.target);
+          }
+        },
+        { threshold: 0.01 },
+      );
+      document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

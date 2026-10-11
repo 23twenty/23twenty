@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Gallery from '../../components/Gallery.astro';
+import { galleries } from '../../lib/galleries';
+
+export async function getStaticPaths() {
+  const all = await galleries();
+  return all.map((g) => ({ params: { slug: g.slug }, props: { gallery: g.entry } }));
+}
+
+const { gallery } = Astro.props;
+---
+
+<Layout title={gallery.title} section="photo">
+  <main>
+    <h1 class="page-title">{gallery.title}</h1>
+    <Gallery photos={gallery.photos} />
+  </main>
+</Layout>

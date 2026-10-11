@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Tile from '../components/Tile.astro';
+import TileGrid from '../components/TileGrid.astro';
+import { asset, read } from '../lib/content';
+
+const home = await read('home');
+---
+
+<Layout section="home">
+  <main>
+    <div class="intro measure">
+      <h1>
+        {home.headingBefore}{' '}<a href="/about/">{home.headingLink}</a>{' '}{home.headingAfter}
+      </h1>
+      <p class="tagline">{home.tagline}</p>
+    </div>
+    <TileGrid>
+      <Tile title="Photo" image={asset(home.photoTile)} href="/photo/" />
+      <Tile title="Video" image={asset(home.videoTile)} href="/video/" />
+    </TileGrid>
+  </main>
+</Layout>
+
+<style>
+  .intro {
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  h1 {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 0 35px;
+    font-family: var(--font-display);
+    font-size: 47px;
+    line-height: 60px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  /* The gold word, with an underline that draws in on hover. */
+  h1 a {
+    position: relative;
+    display: inline-block;
+    color: var(--gold);
+  }
+  h1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: var(--gold);
+    transition: width 0.3s;
+  }
+  h1 a:hover::after {
+    width: 100%;
+  }
+  .tagline {
+    font-family: var(--font-label);
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    color: var(--ink);
+  }
+  @media (max-width: 1020px) {
+    h1 {
+      max-width: 95%;
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+</style>

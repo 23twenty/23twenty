@@ -1,0 +1,119 @@
+---
+import logo from '../assets/Logo-Light.svg';
+import type { read } from '../lib/content';
+
+interface Props {
+  settings: Awaited<ReturnType<typeof read<'settings'>>>;
+}
+
+const { settings } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="measure">
+    <div class="footer-logo">
+      <a href="/"><img src={logo.src} alt="23Twenty Media" width="200" /></a>
+    </div>
+    <p class="footer-email">
+      <a href={`mailto:${settings.email}`}>{settings.email}</a>
+    </p>
+    <ul class="copyright">
+      <!-- The year is set at build time and refreshed in the browser, so it can't go stale between deploys. -->
+      <li>© <span data-year>{year}</span> - 23Twenty Media</li>
+      <li class="social">
+        <a href={settings.facebook} target="_blank" rel="noopener">FACEBOOK</a>
+        <a href={settings.instagram} target="_blank" rel="noopener">INSTAGRAM</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 70px;
+    padding-bottom: 110px;
+    font-size: 16px;
+    line-height: 36px;
+    color: #fff;
+    text-align: center;
+    background: #000;
+  }
+  .footer a {
+    color: #fff;
+  }
+  .footer a:hover {
+    color: var(--gold);
+  }
+
+  .footer-logo {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    padding: 90px 0 130px;
+  }
+  .footer-logo img {
+    width: 200px;
+    height: auto;
+  }
+  /* The short rule between the logo and the email. */
+  .footer-logo::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 2px;
+    height: 77px;
+    margin-top: 20px;
+    margin-left: -2px;
+    background: #1a1a1a;
+  }
+
+  .footer-email {
+    padding-bottom: 50px;
+    font-family: var(--font-display);
+    font-size: 47px;
+    line-height: 60px;
+  }
+  .footer-email a {
+    border-bottom: 2px solid;
+  }
+
+  .copyright {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 1em;
+    list-style: none;
+    font-family: var(--font-label);
+    font-size: 10px;
+    text-align: left;
+  }
+  .social {
+    text-align: right;
+  }
+  .social a + a {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 1020px) {
+    .footer {
+      margin-top: 40px;
+      padding-bottom: 30px;
+    }
+    .footer-email {
+      font-size: 35px;
+      line-height: 35px;
+    }
+    .copyright {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .social {
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-year]').forEach((el) => (el.textContent = String(new Date().getFullYear())));
+</script>

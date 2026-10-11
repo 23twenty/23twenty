@@ -1,0 +1,114 @@
+/*
+ * Site-wide styles. Component-specific rules live in each component's <style>.
+ * Replaces the "Opta" template's 3,100 lines; values were transcribed from what
+ * the live site rendered, and scripts/style-diff.mjs checks the result against it.
+ */
+
+:root {
+  --ink: #000;
+  --body-ink: #4b4b4b;
+  --gold: #d7b065;
+  --selection: #fae3b5;
+
+  --font-body: 'Roboto', serif;
+  --font-display: 'Playfair Display', serif;
+  --font-label: 'Montserrat', sans-serif;
+
+  --measure: 1140px;
+}
+
+/* ---- Base ---- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 35px;
+  font-weight: 400;
+  color: var(--ink);
+  background-color: #fff;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s linear;
+}
+a:hover {
+  color: var(--gold);
+}
+
+::selection {
+  background-color: var(--selection);
+}
+
+/* ---- Layout ---- */
+
+.measure {
+  width: var(--measure);
+  max-width: 95%;
+  margin-inline: auto;
+}
+
+main {
+  color: var(--body-ink);
+}
+
+/* Page titles on the gallery and video pages. */
+.page-title {
+  max-width: 580px;
+  margin: 0 auto 40px;
+  padding: 20px 0;
+  font-family: var(--font-display);
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 400;
+  color: var(--ink);
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1020px) {
+  .page-title {
+    max-width: 95%;
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+/* Tiles fade up the first time they scroll into view. Scoped to .js so the
+   content still shows if the script never runs. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+.js [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

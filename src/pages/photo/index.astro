@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Tile from '../../components/Tile.astro';
+import TileGrid from '../../components/TileGrid.astro';
+import { asset } from '../../lib/content';
+import { galleries } from '../../lib/galleries';
+
+const all = await galleries();
+---
+
+<Layout title="Photography" section="photo">
+  <main>
+    <h1 class="page-title">Photography</h1>
+    <TileGrid>
+      {all.map((g) => <Tile title={g.entry.title} image={asset(g.entry.thumbnail)} href={`/photo/${g.slug}/`} />)}
+    </TileGrid>
+  </main>
+</Layout>
