@@ -18,11 +18,6 @@ The Astro site is on the `astro` branch. www.23twenty.com still serves the old N
 
 ## Product decisions (Brian's call)
 
-- [ ] **The About page is blank** — on the old site too. The gold "passionate" on the home page links to it, so
-      visitors land on an empty page. Either write it (Keystatic → About page: heading + body) or point the link
-      somewhere else.
-- [ ] **Galleries have no click-to-enlarge.** The old site didn't either; the Brian K Photo site has a
-      PhotoSwipe lightbox that could be reused here.
 - [ ] Photo descriptions are generated from the file names ("Philadelphia Headshot Photography (03 of 17)");
       real descriptions help search.
 
@@ -30,4 +25,7 @@ The Astro site is on the `astro` branch. www.23twenty.com still serves the old N
 
 - Videos now fill the screen width on phones (they were the browser's default 300×150 there).
 - The footer year updates itself (it said "© 2025").
+- The About page (blank on the old site too) is gone. "passionate" on the home page is still gold but no longer
+  a link, and `/about/` forwards to the home page.
+- Gallery photos open full-size in a lightbox (PhotoSwipe, as on the Brian K Photo site).
 - Logos no longer have "Opta" (the template's name) as their description; the menu marks the right page.

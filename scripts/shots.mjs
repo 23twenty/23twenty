@@ -4,7 +4,7 @@ import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
 
 const [base = 'http://localhost:4321', out = 'shots/local'] = process.argv.slice(2);
-const pages = process.env.PAGES ? process.env.PAGES.split(',') : ['/', '/photo/', '/photo/headshots/', '/photo/events/', '/photo/music/', '/photo/product/', '/video/', '/about/'];
+const pages = process.env.PAGES ? process.env.PAGES.split(',') : ['/', '/photo/', '/photo/headshots/', '/photo/events/', '/photo/music/', '/photo/product/', '/video/'];
 const viewports = { desktop: { width: 1440, height: 900 }, phone: { width: 390, height: 844 } };
 const findings = [];
 

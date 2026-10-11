@@ -1,23 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { markdoc, read } from '../lib/content';
-
-const about = await read('about');
-const body = markdoc(about.body);
+// The About page was blank and has been removed. Old links (/about and /about/) land on the home page.
+// A config redirect would only match /about on Vercel, so this is a static page that forwards instead.
 ---
 
-<Layout title="About">
-  <main class="measure about">
-    {about.heading && <h1 class="page-title">{about.heading}</h1>}
-    {body && <div class="body" set:html={body} />}
-  </main>
-</Layout>
-
-<style>
-  .about {
-    max-width: 750px;
-  }
-  .body :global(p) {
-    margin-bottom: 1em;
-  }
-</style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <link rel="canonical" href="https://www.23twenty.com/" />
+    <title>23Twenty Media</title>
+  </head>
+  <body>
+    <a href="/">23Twenty Media</a>
+  </body>
+</html>

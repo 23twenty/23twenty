@@ -1,5 +1,4 @@
 import { createReader } from '@keystatic/core/reader';
-import Markdoc, { type Node } from '@markdoc/markdoc';
 import type { ImageMetadata } from 'astro';
 import keystaticConfig from '../../keystatic.config';
 
@@ -15,13 +14,6 @@ export function asset(path: string | null): ImageMetadata {
   const found = path ? assets[path] : undefined;
   if (!found) throw new Error(`Image not found in src/assets: ${path}`);
   return found.default;
-}
-
-export function markdoc(value: { node: Node }): string {
-  // The HTML renderer wraps a document in <article>; the pages supply their own wrappers.
-  return Markdoc.renderers
-    .html(Markdoc.transform(value.node))
-    .replace(/^<article>|<\/article>$/g, '');
 }
 
 export async function read<K extends keyof typeof reader.singletons>(key: K) {

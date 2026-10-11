@@ -14,8 +14,13 @@ const { photos } = Astro.props;
 const items = await Promise.all(
   photos.map(async (p) => {
     const src = asset(p.image);
-    const img = await getImage({ src, widths: [400, 800, 1200], format: 'webp' });
-    return { img, alt: p.alt, ratio: src.width / src.height };
+    const [img, full] = await Promise.all([
+      getImage({ src, widths: [400, 800, 1200], format: 'webp' }),
+      getImage({ src, width: Math.min(1920, src.width), format: 'webp' }),
+    ]);
+    const fullWidth = Number(full.attributes.width ?? src.width);
+    const fullHeight = Math.round((src.height / src.width) * fullWidth);
+    return { img, full, fullWidth, fullHeight, alt: p.alt, ratio: src.width / src.height };
   }),
 );
 ---
@@ -24,20 +29,27 @@ const items = await Promise.all(
   Justified rows, laid out like react-photo-album (which the old site used): rows are chosen
   together so each lands as close as possible to the target height, then scaled to fill the
   width exactly. Without JavaScript the flex-wrap fallback below still shows every photo.
+  Each photo links to its full-size version, which PhotoSwipe (the Brian K Photo lightbox) opens.
 -->
 <div class="rows" data-gallery>
   {
     items.map((p) => (
-      <img
-        src={p.img.src}
-        srcset={p.img.srcSet.attribute}
-        sizes="(max-width: 750px) 50vw, 33vw"
-        alt={p.alt}
-        loading="lazy"
-        decoding="async"
+      <a
+        href={p.full.src}
+        data-pswp-width={p.fullWidth}
+        data-pswp-height={p.fullHeight}
         data-ratio={p.ratio}
         style={`--ratio:${p.ratio}`}
-      />
+      >
+        <img
+          src={p.img.src}
+          srcset={p.img.srcSet.attribute}
+          sizes="(max-width: 750px) 50vw, 33vw"
+          alt={p.alt}
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
     ))
   }
 </div>
@@ -54,12 +66,17 @@ const items = await Promise.all(
     content: '';
     flex-grow: 999;
   }
-  img {
+  a {
     flex-grow: var(--ratio);
     flex-basis: calc(var(--ratio) * var(--row));
     width: 0;
-    height: auto;
     aspect-ratio: var(--ratio);
+    cursor: zoom-in;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   @media (max-width: 599px) {
@@ -84,12 +101,14 @@ const items = await Promise.all(
   .rows :global(.row:last-child) {
     margin-bottom: 0;
   }
-  .rows.is-laid-out img {
+  .rows.is-laid-out a {
     flex: none;
   }
 </style>
 
 <script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
   import { layoutRows } from '../lib/justify';
 
   // react-photo-album's responsive defaults: breakpoints 1200/600/300/0.
@@ -97,7 +116,7 @@ const items = await Promise.all(
   const targetFor = (w: number) => Math.round(w >= 1200 ? w / 5 : w >= 600 ? w / 4 : w >= 300 ? w / 3 : w / 2);
 
   function render(root: HTMLElement) {
-    const imgs = [...root.querySelectorAll<HTMLImageElement>('img[data-ratio]')];
+    const imgs = [...root.querySelectorAll<HTMLElement>('a[data-ratio]')];
     const width = root.clientWidth;
     if (!width || imgs.length === 0) return;
     const spacing = spacingFor(width);
@@ -133,5 +152,6 @@ const items = await Promise.all(
       last = root.clientWidth;
       render(root);
     }).observe(root);
+    new PhotoSwipeLightbox({ gallery: root, children: 'a', pswpModule: () => import('photoswipe') }).init();
   });
 </script>

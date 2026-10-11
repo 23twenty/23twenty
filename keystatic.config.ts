@@ -14,7 +14,7 @@ export default config({
     : { kind: 'local' },
   ui: {
     brand: { name: '23Twenty Media' },
-    navigation: { Site: ['settings', 'home', 'about', 'videos'], Photography: ['galleries'] },
+    navigation: { Site: ['settings', 'home', 'videos'], Photography: ['galleries'] },
   },
   singletons: {
     settings: singleton({
@@ -34,19 +34,11 @@ export default config({
       path: 'src/content/home',
       schema: {
         headingBefore: fields.text({ label: 'Heading, before the gold word' }),
-        headingLink: fields.text({ label: 'Gold word (links to About)' }),
+        headingAccent: fields.text({ label: 'Gold word' }),
         headingAfter: fields.text({ label: 'Heading, after the gold word' }),
         tagline: fields.text({ label: 'Small caps line under the heading' }),
         photoTile: image('Photo tile', 'home'),
         videoTile: image('Video tile', 'home'),
-      },
-    }),
-    about: singleton({
-      label: 'About page',
-      path: 'src/content/about',
-      schema: {
-        heading: fields.text({ label: 'Heading' }),
-        body: fields.markdoc.inline({ label: 'Body' }),
       },
     }),
     videos: singleton({

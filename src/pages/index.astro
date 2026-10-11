@@ -11,7 +11,7 @@ const home = await read('home');
   <main>
     <div class="intro measure">
       <h1>
-        {home.headingBefore}{' '}<a href="/about/">{home.headingLink}</a>{' '}{home.headingAfter}
+        {home.headingBefore}{' '}<em>{home.headingAccent}</em>{' '}{home.headingAfter}
       </h1>
       <p class="tagline">{home.tagline}</p>
     </div>
@@ -37,25 +37,10 @@ const home = await read('home');
     font-weight: 400;
     color: var(--ink);
   }
-  /* The gold word, with an underline that draws in on hover. */
-  h1 a {
-    position: relative;
-    display: inline-block;
+  /* The gold word. It linked to an About page that was never written. */
+  h1 em {
+    font-style: normal;
     color: var(--gold);
-  }
-  h1 a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 0;
-    height: 3px;
-    background-color: var(--gold);
-    transition: width 0.3s;
-  }
-  h1 a:hover::after {
-    width: 100%;
   }
   .tagline {
     font-family: var(--font-label);
