@@ -43,4 +43,4 @@ blocks headless browsers). Anything else is real.
   (menu, gallery layout) silently don't run until you do.
 - **Astro drops whitespace between an element and an `{expression}`** — `</a>\n{text}` renders with no space.
   Write `{' '}` explicitly (see the home heading).
-- **Keystatic storage is `local` in dev, `github` in production** (repo `23twenty/23twenty`).
+- **Keystatic storage is `local` in dev, `github` in production** (repo `brian-kilpatrick/23twenty`).

@@ -5,14 +5,28 @@ The Astro site is on the `astro` branch. www.23twenty.com still serves the old N
 
 ## To finish the switch
 
-- [ ] **Keystatic GitHub login** (desktop browser, ~5 min). Temporarily set `kind: 'github'` for dev in
-      `keystatic.config.ts`, run `npm run dev`, open http://127.0.0.1:4321/keystatic and follow "Create GitHub
-      App" for the `23twenty` org with access to the `23twenty` repo. Copy the four `KEYSTATIC_*` /
-      `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG` values it writes to `.env` into Vercel (Production), revert the config
-      line, redeploy, and add `https://www.23twenty.com/api/keystatic/github/oauth/callback` as a callback URL.
-- [ ] **Connect the Vercel project to GitHub** if the CLI couldn't (the repo is in the `23twenty` org, so the
-      Vercel GitHub app needs access to that org).
-- [ ] **Merge `astro` into `main`** and make `main` Vercel's production branch.
+- [x] **Move the repo to `brian-kilpatrick`.** Vercel won't connect to a repo in another person's personal
+      account, even with its GitHub app installed there and write access (the dashboard and `vercel git connect`
+      both refuse). As **23twenty**: repo Settings → General → Danger Zone → Transfer ownership →
+      `brian-kilpatrick`. Then run `git remote set-url origin https://github.com/brian-kilpatrick/23twenty.git`.
+      `keystatic.config.ts` already points at `brian-kilpatrick/23twenty`.
+- [ ] **Keystatic GitHub login.**
+  - [x] Created the GitHub App `23twentymedia` (owned by `brian-kilpatrick`). Its four `KEYSTATIC_*` /
+        `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG` values are in `.env`.
+  - [x] After the transfer, install the app on `brian-kilpatrick`
+        (https://github.com/apps/23twentymedia/installations/new, only the `23twenty` repo). The install on the
+        `23twenty` account can be removed.
+  - [ ] Copy the four `.env` values into Vercel (Production) and redeploy.
+  - [x] In the app's settings (https://github.com/settings/apps/23twentymedia), make sure the callback URLs
+        include `https://www.23twenty.com/api/keystatic/github/oauth/callback`, plus the `*.vercel.app` one
+        while the editor lives there. (The setup form's "Deployed App URL" field crashes if you type into it;
+        paste the whole URL instead.)
+- [x] **Connect the Vercel project to GitHub** (`vercel git connect`). Production branch is `main`; pushes to
+      other branches make preview deployments.
+- [ ] **Merge `astro` into `main`.** `main` is already Vercel's production branch.
+- [ ] **Make `main` the repo's default branch on GitHub** (repo Settings → General → Default
+      branch). It's still `master`, an older branch last changed Feb 2025, and that's the branch the Keystatic
+      editor opens on, so editors would see an empty site and their edits wouldn't reach the live one.
 - [ ] **Move the domain.** Add `www.23twenty.com` and `23twenty.com` to the Vercel project, point DNS at Vercel,
       confirm, then delete `gh-pages` and turn off GitHub Pages.
 

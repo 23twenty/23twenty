@@ -10,7 +10,7 @@ export default config({
   // Locally the editor writes straight to these files. On the live site it
   // commits to GitHub instead, and the commit triggers a Vercel rebuild.
   storage: import.meta.env.PROD
-    ? { kind: 'github', repo: { owner: '23twenty', name: '23twenty' } }
+    ? { kind: 'github', repo: { owner: 'brian-kilpatrick', name: '23twenty' } }
     : { kind: 'local' },
   ui: {
     brand: { name: '23Twenty Media' },
