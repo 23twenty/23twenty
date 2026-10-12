@@ -1,0 +1,5 @@
+# Keep local secrets and scratch output out of CLI deploys (Vercel reads its env vars from the project).
+.env
+.env.*
+/shots/
+/dist/
