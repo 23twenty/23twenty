@@ -30,8 +30,10 @@ the old Next.js export from GitHub Pages (the `gh-pages` branch, which nothing u
 
 ## Product decisions (Brian's call)
 
-- [ ] Photo descriptions are generated from the file names ("Philadelphia Headshot Photography (03 of 17)");
-      real descriptions help search.
+- [ ] **Photo descriptions are Claude's drafts** (Keystatic → each gallery → Photos → Description). Each one
+      says what's in the photo, without names; the files are renamed to match (e.g.
+      `philadelphia-headshot-musician-trumpet-varsity-jacket-studio.jpg`). Skim them and fix anything off, and
+      add names or places where you want them public (a client, a venue).
 - [ ] **Gallery intros and search descriptions are Claude's drafts** (Keystatic → each gallery: Intro,
       Description; Video page: Description). Rewrite them in your voice: who the work is for, what a session
       is like, where you shoot. This is the copy search engines match against.
