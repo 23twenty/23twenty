@@ -10,13 +10,14 @@ The Astro site is on the `astro` branch. www.23twenty.com still serves the old N
       both refuse). As **23twenty**: repo Settings → General → Danger Zone → Transfer ownership →
       `brian-kilpatrick`. Then run `git remote set-url origin https://github.com/brian-kilpatrick/23twenty.git`.
       `keystatic.config.ts` already points at `brian-kilpatrick/23twenty`.
-- [ ] **Keystatic GitHub login.**
+- [x] **Keystatic GitHub login.** Live editor: https://23twenty.vercel.app/keystatic
   - [x] Created the GitHub App `23twentymedia` (owned by `brian-kilpatrick`). Its four `KEYSTATIC_*` /
         `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG` values are in `.env`.
   - [x] After the transfer, install the app on `brian-kilpatrick`
         (https://github.com/apps/23twentymedia/installations/new, only the `23twenty` repo). The install on the
         `23twenty` account can be removed.
-  - [ ] Copy the four `.env` values into Vercel (Production) and redeploy.
+  - [x] Copy the four `.env` values into Vercel (Production) and redeploy. Production deploys from `main`, so
+        until the merge, deploy `astro` to production with `vercel deploy --prod`.
   - [x] In the app's settings (https://github.com/settings/apps/23twentymedia), make sure the callback URLs
         include `https://www.23twenty.com/api/keystatic/github/oauth/callback`, plus the `*.vercel.app` one
         while the editor lives there. (The setup form's "Deployed App URL" field crashes if you type into it;
