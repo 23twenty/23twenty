@@ -1,7 +1,7 @@
 # Switch-over TODO
 
-The Astro site is on the `astro` branch. www.23twenty.com still serves the old Next.js export from GitHub Pages
-(`gh-pages` branch, deployed from `main` with `npm run deploy`).
+The Astro site is on `main`, which Vercel deploys to production on every push. www.23twenty.com still serves
+the old Next.js export from GitHub Pages (the `gh-pages` branch, which nothing updates any more).
 
 ## To finish the switch
 
@@ -16,18 +16,15 @@ The Astro site is on the `astro` branch. www.23twenty.com still serves the old N
   - [x] After the transfer, install the app on `brian-kilpatrick`
         (https://github.com/apps/23twentymedia/installations/new, only the `23twenty` repo). The install on the
         `23twenty` account can be removed.
-  - [x] Copy the four `.env` values into Vercel (Production) and redeploy. Production deploys from `main`, so
-        until the merge, deploy `astro` to production with `vercel deploy --prod`.
+  - [x] Copy the four `.env` values into Vercel (Production) and redeploy.
   - [x] In the app's settings (https://github.com/settings/apps/23twentymedia), make sure the callback URLs
         include `https://www.23twenty.com/api/keystatic/github/oauth/callback`, plus the `*.vercel.app` one
         while the editor lives there. (The setup form's "Deployed App URL" field crashes if you type into it;
         paste the whole URL instead.)
 - [x] **Connect the Vercel project to GitHub** (`vercel git connect`). Production branch is `main`; pushes to
       other branches make preview deployments.
-- [ ] **Merge `astro` into `main`.** `main` is already Vercel's production branch.
-- [ ] **Make `main` the repo's default branch on GitHub** (repo Settings → General → Default
-      branch). It's still `master`, an older branch last changed Feb 2025, and that's the branch the Keystatic
-      editor opens on, so editors would see an empty site and their edits wouldn't reach the live one.
+- [x] **Merge `astro` into `main`** (fast-forward) and make `main` the repo's default branch on GitHub, so the
+      Keystatic editor opens on it. `master` is an older branch, last changed Feb 2025.
 - [ ] **Move the domain.** Add `www.23twenty.com` and `23twenty.com` to the Vercel project, point DNS at Vercel,
       confirm, then delete `gh-pages` and turn off GitHub Pages.
 
